@@ -6,6 +6,7 @@
 !scripts/
 scripts/*
 !README.md
+!TEST_FILE.txt
 
 # ...even if they are in subdirectories
 !*/
