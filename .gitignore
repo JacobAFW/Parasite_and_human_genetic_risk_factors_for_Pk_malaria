@@ -9,6 +9,10 @@
 !scripts/*/*/*/*
 !scripts/*/*/*/*/*
 !scripts/*/*/*/*/*/*
+!scripts/*/*/*/*/*/*/*
+!scripts/*/*/*/*/*/*/*/*
+!scripts/*/*/*/*/*/*/*/*/*
+!scripts/*/*/*/*/*/*/*/*/*/*
 !README.md
 !Workflow.Rmd
 
