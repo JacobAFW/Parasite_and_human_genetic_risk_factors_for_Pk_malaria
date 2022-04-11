@@ -1,0 +1,1142 @@
+---------------------------------------
+PBS: Job identifier is 34964752.gadi-pbs
+PBS: Job name is Bam_pre-pro
+---------------------------------------
+Define paths and load modules
+---------------------------------------
+---------------------------------------
+Change to working directory and set env variables
+---------------------------------------
+Sort and Index bam files
+mkdir: cannot create directory 'sorted': File exists
+[bam_sort_core] merging from 30 files and 10 in-memory blocks...
+---------------------------------------
+MarkDuplicates
+INFO	2022-02-09 15:45:14	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -AS TRUE -VALIDATION_STRINGENCY LENIENT -I /g/data/pq84/malaria/outputs/02_Mapping/sorted/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.sorted.bam -O /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.bam -M /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4_picard_metrics_file.txt
+**********
+
+
+15:45:14.809 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/picard/build/libs/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Wed Feb 09 15:45:14 GMT+10:00 2022] MarkDuplicates INPUT=[/g/data/pq84/malaria/outputs/02_Mapping/sorted/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.sorted.bam] OUTPUT=/g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.bam METRICS_FILE=/g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4_picard_metrics_file.txt ASSUME_SORTED=true VALIDATION_STRINGENCY=LENIENT    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false ADD_PG_TAG_TO_READS=true REMOVE_DUPLICATES=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Wed Feb 09 15:45:14 GMT+10:00 2022] Executing as jw1542@gadi-cpu-clx-2542.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.26.10-2-g4979a69-SNAPSHOT
+INFO	2022-02-09 15:45:15	MarkDuplicates	Start of doWork freeMemory: 2036049336; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2022-02-09 15:45:15	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2022-02-09 15:45:15	MarkDuplicates	Will retain up to 103736839 data points before spilling to disk.
+Ignoring SAM validation error: ERROR::HEADER_RECORD_MISSING_REQUIRED_TAG:File /g/data/pq84/malaria/outputs/02_Mapping/sorted/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.sorted.bam, Error parsing SAM header. @RG line missing SM tag. Line:
+@RG	ID:PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4	PL:ILLUMINA
+INFO	2022-02-09 15:45:24	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:09s.  Time for last 1,000,000:    9s.  Last read position: ordered_PKNH_03_v2:112,362
+INFO	2022-02-09 15:45:24	MarkDuplicates	Tracking 43690 as yet unmatched pairs. 6731 records in RAM.
+INFO	2022-02-09 15:45:29	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:14s.  Time for last 1,000,000:    4s.  Last read position: ordered_PKNH_03_v2:637,870
+INFO	2022-02-09 15:45:29	MarkDuplicates	Tracking 458891 as yet unmatched pairs. 244572 records in RAM.
+INFO	2022-02-09 15:45:33	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:18s.  Time for last 1,000,000:    4s.  Last read position: ordered_PKNH_03_v2:637,882
+INFO	2022-02-09 15:45:33	MarkDuplicates	Tracking 514304 as yet unmatched pairs. 158010 records in RAM.
+INFO	2022-02-09 15:45:42	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:26s.  Time for last 1,000,000:    8s.  Last read position: ordered_PKNH_04_v2:389,294
+INFO	2022-02-09 15:45:42	MarkDuplicates	Tracking 494637 as yet unmatched pairs. 110199 records in RAM.
+INFO	2022-02-09 15:45:53	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:00:38s.  Time for last 1,000,000:   11s.  Last read position: ordered_PKNH_05_v2:359,402
+INFO	2022-02-09 15:45:53	MarkDuplicates	Tracking 483547 as yet unmatched pairs. 2325 records in RAM.
+INFO	2022-02-09 15:45:57	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:00:41s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_07_v2:233,336
+INFO	2022-02-09 15:45:57	MarkDuplicates	Tracking 502819 as yet unmatched pairs. 11184 records in RAM.
+INFO	2022-02-09 15:46:17	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:01:02s.  Time for last 1,000,000:   20s.  Last read position: ordered_PKNH_08_v2:501,369
+INFO	2022-02-09 15:46:17	MarkDuplicates	Tracking 513541 as yet unmatched pairs. 24301 records in RAM.
+INFO	2022-02-09 15:46:21	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:01:06s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_09_v2:201,081
+INFO	2022-02-09 15:46:21	MarkDuplicates	Tracking 519825 as yet unmatched pairs. 21243 records in RAM.
+INFO	2022-02-09 15:46:25	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:01:09s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_09_v2:1,994,915
+INFO	2022-02-09 15:46:25	MarkDuplicates	Tracking 516817 as yet unmatched pairs. 4072 records in RAM.
+INFO	2022-02-09 15:46:31	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:01:15s.  Time for last 1,000,000:    6s.  Last read position: ordered_PKNH_10_v2:1,316,684
+INFO	2022-02-09 15:46:31	MarkDuplicates	Tracking 508381 as yet unmatched pairs. 6317 records in RAM.
+INFO	2022-02-09 15:46:34	MarkDuplicates	Read    11,000,000 records.  Elapsed time: 00:01:19s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_11_v2:1,688,053
+INFO	2022-02-09 15:46:34	MarkDuplicates	Tracking 488705 as yet unmatched pairs. 24734 records in RAM.
+INFO	2022-02-09 15:46:38	MarkDuplicates	Read    12,000,000 records.  Elapsed time: 00:01:22s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_11_v2:2,127,586
+INFO	2022-02-09 15:46:38	MarkDuplicates	Tracking 474856 as yet unmatched pairs. 3130 records in RAM.
+INFO	2022-02-09 15:46:56	MarkDuplicates	Read    13,000,000 records.  Elapsed time: 00:01:41s.  Time for last 1,000,000:   18s.  Last read position: ordered_PKNH_12_v2:1,187,230
+INFO	2022-02-09 15:46:56	MarkDuplicates	Tracking 343548 as yet unmatched pairs. 64928 records in RAM.
+INFO	2022-02-09 15:46:59	MarkDuplicates	Read    14,000,000 records.  Elapsed time: 00:01:44s.  Time for last 1,000,000:    2s.  Last read position: ordered_PKNH_12_v2:3,032,358
+INFO	2022-02-09 15:46:59	MarkDuplicates	Tracking 292190 as yet unmatched pairs. 1361 records in RAM.
+INFO	2022-02-09 15:47:02	MarkDuplicates	Read    15,000,000 records.  Elapsed time: 00:01:47s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_13_v2:1,666,697
+INFO	2022-02-09 15:47:02	MarkDuplicates	Tracking 263686 as yet unmatched pairs. 10447 records in RAM.
+INFO	2022-02-09 15:47:31	MarkDuplicates	Read    16,000,000 records.  Elapsed time: 00:02:16s.  Time for last 1,000,000:   28s.  Last read position: ordered_PKNH_14_v2:1,431,969
+INFO	2022-02-09 15:47:31	MarkDuplicates	Tracking 236946 as yet unmatched pairs. 236802 records in RAM.
+INFO	2022-02-09 15:47:34	MarkDuplicates	Read    17,000,000 records.  Elapsed time: 00:02:18s.  Time for last 1,000,000:    2s.  Last read position: ordered_PKNH_14_v2:2,271,941
+INFO	2022-02-09 15:47:34	MarkDuplicates	Tracking 43911 as yet unmatched pairs. 43766 records in RAM.
+INFO	2022-02-09 15:47:35	MarkDuplicates	Read 17610191 records. 0 pairs never matched.
+INFO	2022-02-09 15:47:41	MarkDuplicates	After buildSortedReadEndLists freeMemory: 11027136144; totalMemory: 13759414272; maxMemory: 28631367680
+INFO	2022-02-09 15:47:41	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2022-02-09 15:47:41	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1081
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,110
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1285
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,427
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1501
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,133
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1528
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,673
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1696
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,984
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1831
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,338
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2043
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,066
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,866
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2302
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,259
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,412
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2038
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,303
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,959
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1832
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,763
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1817
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,072
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2211
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,185
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,473
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2319
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,475
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:22,372
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 4289
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,560
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,732
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,333
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,127
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2234
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,851
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,470
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 5119
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,272
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,158
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,283
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,039
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,380
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2356
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:13,024
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,908
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 5786
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,349
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,106
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,863
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,785
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,668
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2514
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,679
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,009
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 5695
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,775
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,862
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,551
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,507
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,700
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2502
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,250
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,867
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 6458
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,002
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,809
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,366
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,703
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,714
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,267
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2106
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,142
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,586
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2445
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,893
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,747
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2127
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,422
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,335
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2032
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,871
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,727
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1034
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,878
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2008
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,925
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,452
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 3863
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:23,728
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,547
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,184
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2937
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,470
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,803
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1476
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,876
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 2103
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,862
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,348
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 1038
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,003
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 6179
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,761
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,148
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,153
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,550
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,353
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,883
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	Large duplicate set. size = 5399
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,080
+INFO	2022-02-09 15:48:16	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,777
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,369
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,465
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,228
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	Large duplicate set. size = 1493
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,864
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	Large duplicate set. size = 2498
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,836
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:22,444
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	Large duplicate set. size = 9836
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:23,411
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:22,996
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,274
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,033
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,687
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,477
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,192
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,004
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,669
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	Large duplicate set. size = 1095
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,535
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	Large duplicate set. size = 12255
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:00s.  Time for last 10,000:    0s.  Last read position: 0:25,437
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,091
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:1,940
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,739
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,093
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,732
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,132
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,204
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:22,110
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,434
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,092
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,595
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        12,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,066
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	Large duplicate set. size = 13302
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:00s.  Time for last 10,000:    0s.  Last read position: 0:28,411
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,227
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,178
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,897
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,506
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,197
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,658
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:1,633
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,350
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,120
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,339
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,857
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        12,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,387
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	compared        13,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,145
+INFO	2022-02-09 15:48:17	OpticalDuplicateFinder	Large duplicate set. size = 14057
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:00s.  Time for last 10,000:    0s.  Last read position: 0:25,382
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,456
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,020
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,591
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,734
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,050
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,103
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,861
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:23,258
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,391
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,265
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,530
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        12,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,125
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        13,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,197
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        14,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,893
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 12978
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:00s.  Time for last 10,000:    0s.  Last read position: 0:9,534
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,592
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,090
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,585
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,658
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,876
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,002
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,677
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,936
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,951
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,670
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,378
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared        12,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,375
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 9849
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,071
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,627
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,322
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,925
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,468
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,247
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,156
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,794
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,047
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 7043
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,926
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,012
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,059
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,929
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,188
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,257
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,308
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 4987
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,472
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,849
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:23,384
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,132
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 4345
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,453
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,434
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,828
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,737
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 4002
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:13,006
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,548
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,614
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,232
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 4018
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,567
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,043
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,919
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,019
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 3772
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,854
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,369
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,795
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 1614
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,315
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 2284
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,581
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,443
+INFO	2022-02-09 15:48:18	OpticalDuplicateFinder	Large duplicate set. size = 9724
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,465
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,890
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,418
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:13,874
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,198
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,643
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,663
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,556
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,324
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 2246
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,168
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,640
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 4142
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,108
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,235
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,141
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,101
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 1837
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,491
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 1099
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,675
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 1286
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,187
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 1648
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:13,702
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 2401
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,337
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,182
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 4143
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,925
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,102
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,152
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,532
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 11871
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:00s.  Time for last 10,000:    0s.  Last read position: 0:19,678
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,848
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,843
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,678
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,373
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,436
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,808
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,147
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,808
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,300
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,612
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,902
+INFO	2022-02-09 15:48:19	OpticalDuplicateFinder	Large duplicate set. size = 41645
+INFO	2022-02-09 15:48:24	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:04s.  Time for last 10,000:    0s.  Last read position: 0:6,433
+INFO	2022-02-09 15:48:24	OpticalDuplicateFinder	compared        20,000 ReadEnds to keeper.  Elapsed time: 00:00:04s.  Time for last 10,000:    0s.  Last read position: 0:13,684
+INFO	2022-02-09 15:48:24	OpticalDuplicateFinder	compared        30,000 ReadEnds to keeper.  Elapsed time: 00:00:04s.  Time for last 10,000:    0s.  Last read position: 0:31,539
+INFO	2022-02-09 15:48:24	OpticalDuplicateFinder	compared        40,000 ReadEnds to keeper.  Elapsed time: 00:00:04s.  Time for last 10,000:    0s.  Last read position: 0:28,420
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:8,784
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:13,105
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:1,949
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:30,581
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:2,835
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:16,812
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:27,606
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:9,462
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:6,262
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:11,731
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:3,179
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        12,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:13,042
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        13,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:24,758
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        14,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:2,636
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        15,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:29,107
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        16,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:2,184
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        17,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:2,546
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        18,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:6,352
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        19,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:16,143
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        20,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:21,938
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        21,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:4,544
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        22,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:12,129
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        23,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:20,862
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        24,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:3,866
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        25,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:23,845
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        26,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:11,080
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        27,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:2,058
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        28,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:18,213
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        29,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:4,960
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        30,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:13,304
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        31,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:2,157
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        32,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:5,927
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        33,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:22,182
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        34,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:31,747
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        35,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:6,379
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        36,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:3,992
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        37,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:7,166
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        38,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:5,882
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        39,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:27,733
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        40,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:22,959
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        41,000 ReadEnds to others.  Elapsed time: 00:00:06s.  Time for last 1,000:    0s.  Last read position: 0:2,528
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	Large duplicate set. size = 7748
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,797
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,550
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,752
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,233
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,853
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,491
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,178
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	Large duplicate set. size = 5257
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,104
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,069
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,317
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,441
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,106
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	Large duplicate set. size = 2473
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,171
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,937
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	Large duplicate set. size = 1009
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,865
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	Large duplicate set. size = 1272
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,156
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	Large duplicate set. size = 7804
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,262
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,398
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,049
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,225
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,694
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:23,113
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,656
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	Large duplicate set. size = 13191
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:00s.  Time for last 10,000:    0s.  Last read position: 0:30,047
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,328
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,157
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,716
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,745
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,248
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,638
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,828
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,110
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,479
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,909
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,736
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        12,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,961
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	compared        13,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,764
+INFO	2022-02-09 15:48:26	OpticalDuplicateFinder	Large duplicate set. size = 59209
+INFO	2022-02-09 15:48:36	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:09s.  Time for last 10,000:    0s.  Last read position: 0:19,660
+INFO	2022-02-09 15:48:36	OpticalDuplicateFinder	compared        20,000 ReadEnds to keeper.  Elapsed time: 00:00:09s.  Time for last 10,000:    0s.  Last read position: 0:3,043
+INFO	2022-02-09 15:48:36	OpticalDuplicateFinder	compared        30,000 ReadEnds to keeper.  Elapsed time: 00:00:09s.  Time for last 10,000:    0s.  Last read position: 0:32,244
+INFO	2022-02-09 15:48:36	OpticalDuplicateFinder	compared        40,000 ReadEnds to keeper.  Elapsed time: 00:00:09s.  Time for last 10,000:    0s.  Last read position: 0:10,285
+INFO	2022-02-09 15:48:36	OpticalDuplicateFinder	compared        50,000 ReadEnds to keeper.  Elapsed time: 00:00:09s.  Time for last 10,000:    0s.  Last read position: 0:23,918
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:14,064
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:20,166
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:1,208
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:22,941
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:8,612
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:24,216
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:17,155
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:3,558
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:6,533
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:24,071
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:2,899
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        12,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:7,030
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        13,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:23,122
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        14,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:29,803
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        15,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:20,202
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        16,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:4,526
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        17,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:9,209
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        18,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:28,664
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        19,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:2,139
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        20,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:15,709
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        21,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:14,931
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        22,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:29,306
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        23,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:26,124
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        24,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:14,208
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        25,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:27,986
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        26,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:6,967
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        27,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:30,897
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        28,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:11,695
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        29,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:29,206
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        30,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:22,164
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        31,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:19,325
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        32,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:21,016
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        33,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:10,710
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        34,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:7,554
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        35,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:3,323
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        36,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:6,460
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        37,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:24,153
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        38,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:8,784
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        39,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:17,589
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        40,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:13,838
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        41,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:12,210
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        42,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:24,740
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        43,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:22,010
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        44,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:20,094
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        45,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:8,549
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        46,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:12,337
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        47,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:20,537
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        48,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:1,949
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        49,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:8,024
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        50,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:28,411
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        51,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:30,327
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        52,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:1,524
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        53,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:7,021
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        54,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:20,609
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        55,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:13,169
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        56,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:31,647
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        57,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:6,370
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        58,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:27,362
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	compared        59,000 ReadEnds to others.  Elapsed time: 00:00:14s.  Time for last 1,000:    0s.  Last read position: 0:27,046
+INFO	2022-02-09 15:48:41	OpticalDuplicateFinder	Large duplicate set. size = 17194
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:00s.  Time for last 10,000:    0s.  Last read position: 0:28,456
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:-32,768
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,326
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,663
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,319
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,157
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,590
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,806
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:1,244
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,021
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,434
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        11,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,177
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        12,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,651
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        13,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,978
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        14,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,938
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        15,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,880
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        16,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,802
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        17,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,029
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	Large duplicate set. size = 3026
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,869
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,832
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,291
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	Large duplicate set. size = 3598
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:-32,632
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,471
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,951
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	Large duplicate set. size = 2078
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,021
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,427
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	Large duplicate set. size = 10631
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        10,000 ReadEnds to keeper.  Elapsed time: 00:00:00s.  Time for last 10,000:    0s.  Last read position: 0:2,745
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,095
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,916
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,225
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,696
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,096
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,724
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:1,642
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,985
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:22,309
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared        10,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,916
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	Large duplicate set. size = 9821
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,607
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,451
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,510
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,319
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,293
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,877
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,487
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,763
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:22,381
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	Large duplicate set. size = 2258
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,922
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:23,267
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	Large duplicate set. size = 7590
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,220
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,973
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,945
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,743
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,648
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,471
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,325
+INFO	2022-02-09 15:48:42	OpticalDuplicateFinder	Large duplicate set. size = 7159
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,827
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,343
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,264
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,948
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,188
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,474
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:13,883
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 6543
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,129
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,013
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,570
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,219
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,318
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,377
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 5857
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,853
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,995
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:29,026
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,302
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,912
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1107
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,920
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1528
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,247
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 2372
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,790
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:23,791
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1468
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:17,472
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1182
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,382
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 3187
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,762
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,655
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,766
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1623
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,459
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1537
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:22,182
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1865
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,458
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1916
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,535
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 2364
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:20,943
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,700
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1411
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,850
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 2231
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:25,229
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:27,552
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1607
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:1,913
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 3501
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,838
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,647
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,159
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1501
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,350
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 4364
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:32,371
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,849
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:28,989
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,278
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1690
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,061
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1659
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:26,756
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 9116
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:1,579
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,326
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,875
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,251
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         5,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:10,077
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         6,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:13,150
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         7,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,683
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         8,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,269
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         9,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:3,025
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 2023
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,652
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:8,666
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1279
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,406
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 2124
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:16,324
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:2,157
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1492
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,240
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1336
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,255
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1546
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:22,905
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	Large duplicate set. size = 1398
+INFO	2022-02-09 15:48:43	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:9,842
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1157
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,271
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1547
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:23,366
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1807
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,728
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 4538
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,569
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:15,049
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:18,394
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:5,059
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1480
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,317
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 4208
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,469
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,840
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         3,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:14,796
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         4,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,092
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 2485
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,189
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:24,279
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 2364
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,586
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,711
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 2328
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:7,274
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         2,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:12,689
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1032
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:21,052
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1408
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:30,490
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1121
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:6,072
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1227
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:4,164
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1757
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:31,069
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1806
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:19,614
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	Large duplicate set. size = 1209
+INFO	2022-02-09 15:48:44	OpticalDuplicateFinder	compared         1,000 ReadEnds to others.  Elapsed time: 00:00:00s.  Time for last 1,000:    0s.  Last read position: 0:11,342
+INFO	2022-02-09 15:48:44	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2022-02-09 15:48:46	MarkDuplicates	Sorting list of duplicate records.
+INFO	2022-02-09 15:48:48	MarkDuplicates	After generateDuplicateIndexes freeMemory: 16617835112; totalMemory: 23910154240; maxMemory: 28631367680
+INFO	2022-02-09 15:48:48	MarkDuplicates	Marking 6202258 records as duplicates.
+INFO	2022-02-09 15:48:48	MarkDuplicates	Found 97392 optical duplicate clusters.
+Ignoring SAM validation error: ERROR::HEADER_RECORD_MISSING_REQUIRED_TAG:File /g/data/pq84/malaria/outputs/02_Mapping/sorted/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.sorted.bam, Error parsing SAM header. @RG line missing SM tag. Line:
+@RG	ID:PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4	PL:ILLUMINA
+INFO	2022-02-09 15:48:48	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2022-02-09 15:50:42	MarkDuplicates	Written    10,000,000 records.  Elapsed time: 00:01:54s.  Time for last 10,000,000:  114s.  Last read position: ordered_PKNH_10_v2:1,316,684
+INFO	2022-02-09 15:52:34	MarkDuplicates	Written    20,000,000 records.  Elapsed time: 00:03:46s.  Time for last 10,000,000:  111s.  Last read position: */*
+INFO	2022-02-09 15:54:21	MarkDuplicates	Written    30,000,000 records.  Elapsed time: 00:05:33s.  Time for last 10,000,000:  107s.  Last read position: */*
+INFO	2022-02-09 15:56:09	MarkDuplicates	Written    40,000,000 records.  Elapsed time: 00:07:21s.  Time for last 10,000,000:  107s.  Last read position: */*
+INFO	2022-02-09 15:57:59	MarkDuplicates	Written    50,000,000 records.  Elapsed time: 00:09:10s.  Time for last 10,000,000:  109s.  Last read position: */*
+INFO	2022-02-09 15:59:48	MarkDuplicates	Written    60,000,000 records.  Elapsed time: 00:11:00s.  Time for last 10,000,000:  109s.  Last read position: */*
+INFO	2022-02-09 16:00:27	MarkDuplicates	Writing complete. Closing input iterator.
+INFO	2022-02-09 16:00:27	MarkDuplicates	Duplicate Index cleanup.
+INFO	2022-02-09 16:00:27	MarkDuplicates	Getting Memory Stats.
+INFO	2022-02-09 16:00:28	MarkDuplicates	Before output close freeMemory: 23530724344; totalMemory: 23737663488; maxMemory: 28631367680
+INFO	2022-02-09 16:00:28	MarkDuplicates	Closed outputs. Getting more Memory Stats.
+INFO	2022-02-09 16:00:28	MarkDuplicates	After output close freeMemory: 23777479624; totalMemory: 23984603136; maxMemory: 28631367680
+[Wed Feb 09 16:00:28 GMT+10:00 2022] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 15.23 minutes.
+Runtime.totalMemory()=23984603136
+---------------------------------------
+Change header @RG and index
+---------------------------------------
+RealignerTargetCreator
+INFO  16:01:51,234 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:01:51,236 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:01:51,236 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:01:51,236 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:01:51,236 HelpFormatter - [Wed Feb 09 16:01:51 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:01:51,236 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:01:51,239 HelpFormatter - Program Args: -T RealignerTargetCreator -nt 10 -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -I /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.reheader.bam --intervals /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -known /g/data/pq84/malaria/data/ref_genomes/variants/TRUE_INDELs.vcf -o /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigner.intervals 
+INFO  16:01:51,244 HelpFormatter - Executing as jw1542@gadi-cpu-clx-2542.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:01:51,244 HelpFormatter - Date/Time: 2022/02/09 16:01:51 
+INFO  16:01:51,244 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:01:51,245 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:01:51,254 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:01:51,272 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:01:51,272 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:01:51,273 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:01:51,424 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  16:01:51,428 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,492 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.06 
+INFO  16:01:51,607 IntervalUtils - Processing 24320447 bp from intervals 
+INFO  16:01:51,614 MicroScheduler - Running the GATK in parallel mode with 10 total threads, 1 CPU thread(s) for each of 10 data thread(s), of 96 processors available on this machine 
+INFO  16:01:51,675 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:01:51,698 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:01:51,698 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:01:51,698 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:01:51,698 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:01:51,703 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,711 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  16:01:51,712 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,721 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  16:01:51,722 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,729 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  16:01:51,730 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,739 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  16:01:51,740 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,749 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+INFO  16:01:51,750 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,767 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  16:01:51,767 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,770 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:01:51,771 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,775 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:01:51,775 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:01:51,778 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.00 
+INFO  16:02:21,940 ProgressMeter - ordered_PKNH_14_v2:409901   2.1274444E7    30.0 s       1.0 s       88.1%    34.0 s       4.0 s 
+INFO  16:02:26,461 ProgressMeter -            done   2.4320447E7    34.0 s       1.0 s      100.0%    34.0 s       0.0 s 
+INFO  16:02:26,463 ProgressMeter - Total runtime 34.76 secs, 0.58 min, 0.01 hours 
+INFO  16:02:26,464 MicroScheduler - 9241185 reads were filtered out during the traversal out of approximately 17696553 total reads (52.22%) 
+INFO  16:02:26,464 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:02:26,465 MicroScheduler -   -> 1025729 reads (5.80% of total) failing BadMateFilter 
+INFO  16:02:26,465 MicroScheduler -   -> 4068940 reads (22.99% of total) failing DuplicateReadFilter 
+INFO  16:02:26,465 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:02:26,465 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:02:26,466 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:02:26,466 MicroScheduler -   -> 4026476 reads (22.75% of total) failing MappingQualityZeroFilter 
+INFO  16:02:26,466 MicroScheduler -   -> 120040 reads (0.68% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:02:26,466 MicroScheduler -   -> 0 reads (0.00% of total) failing Platform454Filter 
+INFO  16:02:26,467 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+---------------------------------------
+IndelRealigner
+INFO  16:02:27,744 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:02:27,746 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:02:27,746 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:02:27,746 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:02:27,746 HelpFormatter - [Wed Feb 09 16:02:27 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:02:27,746 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:02:27,748 HelpFormatter - Program Args: -T IndelRealigner --consensusDeterminationModel KNOWNS_ONLY -LOD 0.4 -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -I /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.reheader.bam --intervals /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -known /g/data/pq84/malaria/data/ref_genomes/variants/TRUE_INDELs.vcf -targetIntervals /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigner.intervals -o /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigned.bam 
+INFO  16:02:27,757 HelpFormatter - Executing as jw1542@gadi-cpu-clx-2542.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:02:27,758 HelpFormatter - Date/Time: 2022/02/09 16:02:27 
+INFO  16:02:27,758 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:02:27,758 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:02:27,831 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:02:27,846 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:02:27,847 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:02:27,847 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:02:27,954 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  16:02:27,961 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:02:27,979 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  16:02:28,018 IntervalUtils - Processing 24320447 bp from intervals 
+INFO  16:02:28,066 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:02:28,086 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:02:28,086 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:02:28,086 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:02:28,086 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  16:02:28,152 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:02:28,165 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:02:36,736 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:02:36,745 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:02:43,692 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:02:43,710 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:02:50,318 IndelRealigner - Not attempting realignment in interval ordered_PKNH_03_v2:637848-637908 because there are too many reads. 
+INFO  16:02:58,191 ProgressMeter - ordered_PKNH_03_v2:637919   1351992.0    30.0 s      22.0 s        9.5%     5.2 m       4.7 m 
+INFO  16:03:28,198 ProgressMeter - ordered_PKNH_03_v2:637919   1451993.0    60.0 s      41.0 s        9.5%    10.5 m       9.5 m 
+INFO  16:03:58,215 ProgressMeter - ordered_PKNH_03_v2:637919   1551999.0    90.0 s      58.0 s        9.5%    15.7 m      14.2 m 
+INFO  16:04:28,251 ProgressMeter - ordered_PKNH_03_v2:637919   1652000.0   120.0 s      72.0 s        9.5%    21.0 m      19.0 m 
+INFO  16:04:58,255 ProgressMeter - ordered_PKNH_03_v2:637919   1752006.0     2.5 m      85.0 s        9.5%    26.2 m      23.7 m 
+INFO  16:05:28,257 ProgressMeter - ordered_PKNH_03_v2:637921   2152076.0     3.0 m      83.0 s        9.5%    31.5 m      28.5 m 
+INFO  16:05:58,258 ProgressMeter - ordered_PKNH_03_v2:637921   2452092.0     3.5 m      85.0 s        9.5%    36.7 m      33.2 m 
+INFO  16:06:28,259 ProgressMeter - ordered_PKNH_03_v2:637921   2752102.0     4.0 m      87.0 s        9.5%    42.0 m      38.0 m 
+INFO  16:06:58,261 ProgressMeter - ordered_PKNH_03_v2:637921   3052130.0     4.5 m      88.0 s        9.5%    47.2 m      42.7 m 
+INFO  16:07:28,262 ProgressMeter - ordered_PKNH_03_v2:637921   3352147.0     5.0 m      89.0 s        9.5%    52.5 m      47.5 m 
+INFO  16:07:50,285 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:07:50,292 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:07:54,702 IndelRealigner - Not attempting realignment in interval ordered_PKNH_04_v2:423014-423034 because there are too many reads. 
+INFO  16:07:58,263 ProgressMeter - ordered_PKNH_04_v2:423049   4056732.0     5.5 m      81.0 s       13.0%    42.4 m      36.9 m 
+INFO  16:08:28,346 ProgressMeter - ordered_PKNH_04_v2:423049   4256744.0     6.0 m      84.0 s       13.0%    46.3 m      40.3 m 
+INFO  16:08:36,947 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:08:36,954 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:08:43,566 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:08:43,569 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:08:53,013 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:08:53,024 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:08:58,347 ProgressMeter - ordered_PKNH_07_v2:599158   6098498.0     6.5 m      63.0 s       26.0%    25.0 m      18.5 m 
+INFO  16:09:05,596 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:09:05,600 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:09:17,382 IndelRealigner - Not attempting realignment in interval ordered_PKNH_08_v2:1223960-1224306 because there are too many reads. 
+INFO  16:09:25,056 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:09:25,061 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:09:28,349 ProgressMeter - ordered_PKNH_09_v2:314704   8010302.0     7.0 m      52.0 s       39.0%    17.9 m      10.9 m 
+INFO  16:09:43,492 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:09:43,495 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:09:54,066 IndelRealigner - Not attempting realignment in interval ordered_PKNH_10_v2:1126140-1126183 because there are too many reads. 
+INFO  16:09:59,314 ProgressMeter - ordered_PKNH_10_v2:1126264   9794760.0     7.5 m      46.0 s       51.4%    14.6 m       7.1 m 
+INFO  16:10:09,674 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:10:09,679 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:10:27,144 IndelRealigner - Not attempting realignment in interval ordered_PKNH_11_v2:1842425-1842568 because there are too many reads. 
+INFO  16:10:30,038 ProgressMeter - ordered_PKNH_11_v2:1842550   1.1096851E7     8.0 m      43.0 s       60.6%    13.2 m       5.2 m 
+INFO  16:10:41,781 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:10:41,787 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:11:00,090 ProgressMeter - ordered_PKNH_12_v2:1187266   1.2716909E7     8.5 m      40.0 s       67.6%    12.6 m       4.1 m 
+INFO  16:11:30,091 ProgressMeter - ordered_PKNH_12_v2:1187266   1.2916912E7     9.0 m      41.0 s       67.6%    13.4 m       4.3 m 
+INFO  16:11:55,985 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:11:55,991 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:12:00,268 ProgressMeter - ordered_PKNH_13_v2:457234   1.4271194E7     9.5 m      40.0 s       77.6%    12.3 m       2.8 m 
+INFO  16:12:04,842 IndelRealigner - Not attempting realignment in interval ordered_PKNH_13_v2:986507-986979 because there are too many reads. 
+INFO  16:12:16,192 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:12:16,197 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:12:27,928 IndelRealigner - Not attempting realignment in interval ordered_PKNH_14_v2:1864700-1864815 because there are too many reads. 
+INFO  16:12:30,270 ProgressMeter - ordered_PKNH_14_v2:1864828   1.6222785E7    10.0 m      37.0 s       94.1%    10.7 m      37.0 s 
+INFO  16:13:00,271 ProgressMeter - ordered_PKNH_14_v2:1864828   1.6322786E7    10.5 m      38.0 s       94.1%    11.2 m      39.0 s 
+INFO  16:13:30,272 ProgressMeter - ordered_PKNH_14_v2:1864828   1.6422789E7    11.0 m      40.0 s       94.1%    11.7 m      41.0 s 
+INFO  16:14:00,273 ProgressMeter - ordered_PKNH_14_v2:1864828   1.6522793E7    11.5 m      41.0 s       94.1%    12.3 m      43.0 s 
+INFO  16:14:30,274 ProgressMeter - ordered_PKNH_14_v2:1864828   1.6522793E7    12.0 m      43.0 s       94.1%    12.8 m      45.0 s 
+INFO  16:15:00,275 ProgressMeter - ordered_PKNH_14_v2:1864828   1.6622795E7    12.5 m      45.0 s       94.1%    13.3 m      47.0 s 
+INFO  16:15:30,277 ProgressMeter - ordered_PKNH_14_v2:1864828   1.6722796E7    13.0 m      46.0 s       94.1%    13.9 m      49.0 s 
+INFO  16:15:58,063 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:15:58,063 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:15:58,831 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:15:58,832 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:15:59,012 ProgressMeter -            done   1.7610191E7    13.5 m      46.0 s      100.0%    13.5 m       0.0 s 
+INFO  16:15:59,012 ProgressMeter - Total runtime 810.93 secs, 13.52 min, 0.23 hours 
+INFO  16:15:59,018 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 17610191 total reads (0.00%) 
+INFO  16:15:59,018 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:15:59,019 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+---------------------------------------
+BaseRecalibrator - create recal table
+INFO  16:16:00,418 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:16:00,420 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:16:00,420 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:16:00,420 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:16:00,420 HelpFormatter - [Wed Feb 09 16:16:00 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:16:00,420 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:16:00,422 HelpFormatter - Program Args: -T BaseRecalibrator -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -I /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigned.bam --intervals /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -knownSites /g/data/pq84/malaria/data/ref_genomes/variants/TRUE_consensus.vcf -o /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.table 
+INFO  16:16:00,430 HelpFormatter - Executing as jw1542@gadi-cpu-clx-2542.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:16:00,430 HelpFormatter - Date/Time: 2022/02/09 16:16:00 
+INFO  16:16:00,431 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:16:00,431 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:16:00,469 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:16:00,498 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:16:00,498 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:16:00,499 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:16:00,604 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  16:16:00,608 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:16:00,702 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.09 
+INFO  16:16:00,955 IntervalUtils - Processing 24320447 bp from intervals 
+INFO  16:16:01,006 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:16:01,019 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:16:01,019 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:16:01,019 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:16:01,019 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  16:16:01,052 BaseRecalibrator - The covariates being used here:  
+INFO  16:16:01,052 BaseRecalibrator - 	ReadGroupCovariate 
+INFO  16:16:01,052 BaseRecalibrator - 	QualityScoreCovariate 
+INFO  16:16:01,053 BaseRecalibrator - 	ContextCovariate 
+INFO  16:16:01,053 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  16:16:01,053 BaseRecalibrator - 	CycleCovariate 
+INFO  16:16:01,055 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:16:01,077 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:16:31,025 ProgressMeter - ordered_PKNH_01_v2:617029    200007.0    30.0 s       2.5 m        2.5%    19.7 m      19.2 m 
+INFO  16:16:36,641 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:16:36,659 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:17:01,029 ProgressMeter - ordered_PKNH_02_v2:482935    450206.0    60.0 s       2.2 m        5.7%    17.7 m      16.7 m 
+INFO  16:17:02,769 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:17:02,784 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:17:31,031 ProgressMeter - ordered_PKNH_03_v2:370345    724552.0    90.0 s       2.1 m        8.4%    17.8 m      16.3 m 
+INFO  16:17:53,079 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:17:53,084 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:18:01,033 ProgressMeter - ordered_PKNH_04_v2:23862   1068439.0   120.0 s     112.0 s       11.3%    17.7 m      15.7 m 
+INFO  16:18:31,129 ProgressMeter - ordered_PKNH_04_v2:805505   1368443.0     2.5 m     109.0 s       14.5%    17.2 m      14.7 m 
+INFO  16:18:38,667 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:18:38,672 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:19:01,149 ProgressMeter - ordered_PKNH_05_v2:551644   1602051.0     3.0 m     112.0 s       18.2%    16.5 m      13.5 m 
+INFO  16:19:01,322 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:19:01,327 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:19:31,151 ProgressMeter - ordered_PKNH_06_v2:446595   1884293.0     3.5 m     111.0 s       20.9%    16.7 m      13.2 m 
+INFO  16:19:50,996 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:19:51,006 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:20:01,243 ProgressMeter - ordered_PKNH_07_v2:241948   2216555.0     4.0 m     108.0 s       24.5%    16.3 m      12.3 m 
+INFO  16:20:31,295 ProgressMeter - ordered_PKNH_07_v2:999054   2516562.0     4.5 m     107.0 s       27.7%    16.3 m      11.8 m 
+INFO  16:20:44,361 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:20:44,366 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:21:01,468 ProgressMeter - ordered_PKNH_08_v2:296399   2784761.0     5.0 m     107.0 s       31.0%    16.1 m      11.1 m 
+INFO  16:21:31,503 ProgressMeter - ordered_PKNH_08_v2:1156152   3084764.0     5.5 m     107.0 s       34.6%    15.9 m      10.4 m 
+INFO  16:21:51,112 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:21:51,117 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:22:01,544 ProgressMeter - ordered_PKNH_08_v2:1923619   3384770.0     6.0 m     106.0 s       37.7%    15.9 m       9.9 m 
+INFO  16:22:31,641 ProgressMeter - ordered_PKNH_09_v2:822617   3783733.0     6.5 m     103.0 s       41.1%    15.8 m       9.3 m 
+INFO  16:23:02,718 ProgressMeter - ordered_PKNH_09_v2:1626271   4083738.0     7.0 m     103.0 s       44.4%    15.8 m       8.8 m 
+INFO  16:23:10,628 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:23:10,632 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:23:32,757 ProgressMeter - ordered_PKNH_10_v2:470801   4373473.0     7.5 m     103.0 s       48.7%    15.4 m       7.9 m 
+INFO  16:24:02,758 ProgressMeter - ordered_PKNH_10_v2:1170239   4673531.0     8.0 m     103.0 s       51.6%    15.6 m       7.5 m 
+INFO  16:24:07,085 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:24:07,090 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:24:32,759 ProgressMeter - ordered_PKNH_11_v2:580051   4954442.0     8.5 m     103.0 s       55.4%    15.4 m       6.9 m 
+INFO  16:25:02,761 ProgressMeter - ordered_PKNH_11_v2:1475561   5254449.0     9.0 m     103.0 s       59.0%    15.3 m       6.3 m 
+INFO  16:25:32,763 ProgressMeter - ordered_PKNH_11_v2:2136910   5554453.0     9.5 m     102.0 s       61.8%    15.4 m       5.9 m 
+INFO  16:25:34,342 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:25:34,346 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:26:02,841 ProgressMeter - ordered_PKNH_12_v2:541534   5808952.0    10.0 m     103.0 s       64.9%    15.4 m       5.4 m 
+INFO  16:26:33,621 ProgressMeter - ordered_PKNH_12_v2:1547507   6208960.0    10.5 m     101.0 s       69.1%    15.2 m       4.7 m 
+INFO  16:27:03,622 ProgressMeter - ordered_PKNH_12_v2:2524833   6508966.0    11.0 m     101.0 s       73.1%    15.1 m       4.1 m 
+INFO  16:27:19,799 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:27:19,805 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:27:33,623 ProgressMeter - ordered_PKNH_13_v2:230030   6767539.0    11.5 m     102.0 s       76.7%    15.0 m       3.5 m 
+INFO  16:28:03,625 ProgressMeter - ordered_PKNH_13_v2:1046755   7067560.0    12.0 m     102.0 s       80.0%    15.0 m       3.0 m 
+INFO  16:28:33,704 ProgressMeter - ordered_PKNH_13_v2:1926179   7367568.0    12.5 m     102.0 s       83.6%    15.0 m       2.5 m 
+INFO  16:28:45,085 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:28:45,090 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:29:13,705 ProgressMeter - ordered_PKNH_14_v2:750031   7746560.0    13.2 m     102.0 s       89.5%    14.8 m      93.0 s 
+INFO  16:29:43,709 ProgressMeter - ordered_PKNH_14_v2:1801532   8047149.0    13.7 m     102.0 s       93.8%    14.6 m      54.0 s 
+INFO  16:30:13,734 ProgressMeter - ordered_PKNH_14_v2:2488578   8347157.0    14.2 m     102.0 s       96.6%    14.7 m      29.0 s 
+INFO  16:30:33,435 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:30:33,436 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:30:38,703 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:30:38,704 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:30:39,073 BaseRecalibrator - Calculating quantized quality scores... 
+INFO  16:30:39,096 BaseRecalibrator - Writing recalibration report... 
+INFO  16:30:39,384 BaseRecalibrator - ...done! 
+INFO  16:30:39,384 BaseRecalibrator - BaseRecalibrator was able to recalibrate 8714241 reads 
+INFO  16:30:39,385 ProgressMeter -            done   8714262.0    14.6 m     100.0 s      100.0%    14.6 m       0.0 s 
+INFO  16:30:39,385 ProgressMeter - Total runtime 878.37 secs, 14.64 min, 0.24 hours 
+INFO  16:30:39,385 MicroScheduler - 8895929 reads were filtered out during the traversal out of approximately 17610191 total reads (50.52%) 
+INFO  16:30:39,385 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:30:39,385 MicroScheduler -   -> 4481854 reads (25.45% of total) failing DuplicateReadFilter 
+INFO  16:30:39,386 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  16:30:39,386 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  16:30:39,386 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  16:30:39,386 MicroScheduler -   -> 4020267 reads (22.83% of total) failing MappingQualityZeroFilter 
+INFO  16:30:39,386 MicroScheduler -   -> 393808 reads (2.24% of total) failing NotPrimaryAlignmentFilter 
+INFO  16:30:39,386 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+---------------------------------------
+PrintReads - get recal reads
+INFO  16:30:40,720 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:30:40,721 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:30:40,722 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:30:40,722 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:30:40,722 HelpFormatter - [Wed Feb 09 16:30:40 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:30:40,722 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:30:40,724 HelpFormatter - Program Args: -T PrintReads -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta --intervals /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -I /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigned.bam -BQSR /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.table -o /g/data/pq84/malaria/outputs/03_Bam-pre/final_bam/PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.bam 
+INFO  16:30:40,729 HelpFormatter - Executing as jw1542@gadi-cpu-clx-2542.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:30:40,729 HelpFormatter - Date/Time: 2022/02/09 16:30:40 
+INFO  16:30:40,729 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:30:40,729 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:30:40,783 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:30:40,798 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:30:40,799 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:30:40,799 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:30:41,053 ContextCovariate - 		Context sizes: base substitution model 2, indel substitution model 3 
+INFO  16:30:41,068 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  16:30:41,074 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  16:30:41,096 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+INFO  16:30:41,115 IntervalUtils - Processing 24320447 bp from intervals 
+INFO  16:30:41,156 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  16:30:41,181 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:30:41,181 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:30:41,182 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:30:41,182 ProgressMeter -        Location |     reads | elapsed |     reads | completed | runtime |   runtime 
+INFO  16:30:41,191 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:30:41,211 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:31:11,191 ProgressMeter - ordered_PKNH_01_v2:549064    200030.0    30.0 s       2.5 m        2.3%    22.1 m      21.6 m 
+INFO  16:31:28,384 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:31:28,392 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:31:41,477 ProgressMeter - ordered_PKNH_02_v2:229146    624920.0    60.0 s      96.0 s        4.6%    21.7 m      20.7 m 
+INFO  16:32:04,720 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:32:04,732 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:32:11,479 ProgressMeter - ordered_PKNH_03_v2:110487    951930.0    90.0 s      94.0 s        7.4%    20.4 m      18.9 m 
+INFO  16:32:41,549 ProgressMeter - ordered_PKNH_03_v2:637919   1251983.0   120.0 s      96.0 s        9.5%    21.0 m      19.0 m 
+INFO  16:33:11,551 ProgressMeter - ordered_PKNH_03_v2:637920   1652016.0     2.5 m      91.0 s        9.5%    26.2 m      23.7 m 
+INFO  16:33:41,552 ProgressMeter - ordered_PKNH_03_v2:637922   2052054.0     3.0 m      87.0 s        9.5%    31.5 m      28.5 m 
+INFO  16:34:11,553 ProgressMeter - ordered_PKNH_03_v2:637922   2352066.0     3.5 m      89.0 s        9.5%    36.7 m      33.2 m 
+INFO  16:34:41,594 ProgressMeter - ordered_PKNH_03_v2:637922   2752105.0     4.0 m      87.0 s        9.5%    42.0 m      38.0 m 
+INFO  16:35:11,822 ProgressMeter - ordered_PKNH_03_v2:637922   3152127.0     4.5 m      85.0 s        9.5%    47.2 m      42.7 m 
+INFO  16:35:41,870 ProgressMeter - ordered_PKNH_03_v2:709144   3452204.0     5.0 m      87.0 s        9.8%    50.9 m      45.9 m 
+INFO  16:35:59,411 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:35:59,418 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:36:11,872 ProgressMeter - ordered_PKNH_04_v2:233346   3856699.0     5.5 m      85.0 s       12.2%    45.1 m      39.6 m 
+INFO  16:36:41,873 ProgressMeter - ordered_PKNH_04_v2:423049   4256792.0     6.0 m      84.0 s       13.0%    46.3 m      40.3 m 
+INFO  16:37:11,874 ProgressMeter - ordered_PKNH_04_v2:845551   4556807.0     6.5 m      85.0 s       14.7%    44.2 m      37.7 m 
+INFO  16:37:22,060 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:37:22,065 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:37:42,490 ProgressMeter - ordered_PKNH_05_v2:334861   4977947.0     7.0 m      84.0 s       17.3%    40.7 m      33.6 m 
+INFO  16:37:57,723 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:37:57,727 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:38:12,491 ProgressMeter - ordered_PKNH_06_v2:169591   5327102.0     7.5 m      84.0 s       19.8%    38.0 m      30.5 m 
+INFO  16:38:42,519 ProgressMeter - ordered_PKNH_06_v2:743745   5627111.0     8.0 m      85.0 s       22.2%    36.2 m      28.2 m 
+INFO  16:38:51,903 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:38:51,908 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:39:12,521 ProgressMeter - ordered_PKNH_07_v2:355736   5998495.0     8.5 m      85.0 s       25.0%    34.1 m      25.5 m 
+INFO  16:39:42,695 ProgressMeter - ordered_PKNH_07_v2:969465   6398506.0     9.0 m      84.0 s       27.5%    32.8 m      23.7 m 
+INFO  16:40:05,603 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:40:05,608 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:40:12,799 ProgressMeter - ordered_PKNH_08_v2:42915   6756659.0     9.5 m      84.0 s       30.0%    31.7 m      22.2 m 
+INFO  16:40:42,801 ProgressMeter - ordered_PKNH_08_v2:782240   7056667.0    10.0 m      85.0 s       33.0%    30.3 m      20.3 m 
+INFO  16:41:13,057 ProgressMeter - ordered_PKNH_08_v2:1254592   7456715.0    10.5 m      84.0 s       35.0%    30.1 m      19.6 m 
+INFO  16:41:42,336 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:41:42,343 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:41:43,131 ProgressMeter - ordered_PKNH_08_v2:1813138   7857841.0    11.0 m      84.0 s       37.3%    29.6 m      18.6 m 
+INFO  16:42:13,132 ProgressMeter - ordered_PKNH_09_v2:593094   8210323.0    11.5 m      84.0 s       40.2%    28.7 m      17.2 m 
+INFO  16:42:43,134 ProgressMeter - ordered_PKNH_09_v2:1177603   8515153.0    12.0 m      84.0 s       42.6%    28.2 m      16.2 m 
+INFO  16:43:13,253 ProgressMeter - ordered_PKNH_09_v2:1857073   8915184.0    12.5 m      84.0 s       45.4%    27.6 m      15.1 m 
+INFO  16:43:20,163 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:43:20,167 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:43:43,254 ProgressMeter - ordered_PKNH_10_v2:386944   9194744.0    13.0 m      85.0 s       48.3%    27.0 m      13.9 m 
+INFO  16:44:13,260 ProgressMeter - ordered_PKNH_10_v2:934293   9594755.0    13.5 m      84.0 s       50.6%    26.8 m      13.2 m 
+INFO  16:44:43,261 ProgressMeter - ordered_PKNH_10_v2:1320511   9994769.0    14.0 m      84.0 s       52.2%    26.9 m      12.9 m 
+INFO  16:44:50,506 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:44:50,511 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:45:13,262 ProgressMeter - ordered_PKNH_11_v2:525482   1.0296812E7    14.5 m      84.0 s       55.1%    26.4 m      11.8 m 
+INFO  16:45:43,263 ProgressMeter - ordered_PKNH_11_v2:1210571   1.0696822E7    15.0 m      84.0 s       58.0%    25.9 m      10.9 m 
+INFO  16:46:13,270 ProgressMeter - ordered_PKNH_11_v2:1778459   1.0996849E7    15.5 m      84.0 s       60.3%    25.8 m      10.2 m 
+INFO  16:46:43,272 ProgressMeter - ordered_PKNH_11_v2:1842551   1.1247856E7    16.0 m      85.0 s       60.6%    26.5 m      10.4 m 
+INFO  16:47:13,273 ProgressMeter - ordered_PKNH_11_v2:1842555   1.1760085E7    16.5 m      84.0 s       60.6%    27.3 m      10.8 m 
+INFO  16:47:36,737 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:47:36,745 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:47:43,333 ProgressMeter - ordered_PKNH_12_v2:68303   1.2116875E7    17.0 m      84.0 s       63.0%    27.0 m      10.0 m 
+INFO  16:48:13,513 ProgressMeter - ordered_PKNH_12_v2:760704   1.241688E7    17.5 m      84.0 s       65.8%    26.6 m       9.1 m 
+INFO  16:48:43,570 ProgressMeter - ordered_PKNH_12_v2:1187266   1.2816919E7    18.0 m      84.0 s       67.6%    26.7 m       8.6 m 
+INFO  16:49:23,571 ProgressMeter - ordered_PKNH_12_v2:1688732   1.3316932E7    18.7 m      84.0 s       69.7%    26.8 m       8.1 m 
+INFO  16:49:53,674 ProgressMeter - ordered_PKNH_12_v2:2474039   1.3616936E7    19.2 m      84.0 s       72.9%    26.3 m       7.1 m 
+INFO  16:50:20,111 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:50:20,116 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:50:23,675 ProgressMeter - ordered_PKNH_12_v2:3123304   1.401695E7    19.7 m      84.0 s       75.6%    26.1 m       6.4 m 
+INFO  16:50:53,675 ProgressMeter - ordered_PKNH_13_v2:693965   1.4371196E7    20.2 m      84.0 s       78.6%    25.7 m       5.5 m 
+INFO  16:51:23,734 ProgressMeter - ordered_PKNH_13_v2:1291992   1.4671754E7    20.7 m      84.0 s       81.0%    25.5 m       4.8 m 
+INFO  16:51:53,851 ProgressMeter - ordered_PKNH_13_v2:1906841   1.507177E7    21.2 m      84.0 s       83.6%    25.4 m       4.2 m 
+INFO  16:52:14,602 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:52:14,607 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:52:23,852 ProgressMeter - ordered_PKNH_14_v2:206797   1.5422696E7    21.7 m      84.0 s       87.2%    24.9 m       3.2 m 
+INFO  16:52:53,853 ProgressMeter - ordered_PKNH_14_v2:994436   1.5822757E7    22.2 m      84.0 s       90.5%    24.5 m       2.3 m 
+INFO  16:53:23,919 ProgressMeter - ordered_PKNH_14_v2:1854061   1.612278E7    22.7 m      84.0 s       94.0%    24.1 m      86.0 s 
+INFO  16:53:53,919 ProgressMeter - ordered_PKNH_14_v2:1864829   1.6522786E7    23.2 m      84.0 s       94.1%    24.7 m      87.0 s 
+INFO  16:54:23,920 ProgressMeter - ordered_PKNH_14_v2:2143680   1.6822796E7    23.7 m      84.0 s       95.2%    24.9 m      71.0 s 
+INFO  16:54:53,939 ProgressMeter - ordered_PKNH_14_v2:2667239   1.7222801E7    24.2 m      84.0 s       97.4%    24.9 m      39.0 s 
+INFO  16:55:13,968 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:55:13,968 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:55:19,536 ReadShardBalancer$1 - Loading BAM index data 
+INFO  16:55:19,536 ReadShardBalancer$1 - Done loading BAM index data 
+INFO  16:55:20,714 Walker - [REDUCE RESULT] Traversal result is: org.broadinstitute.gatk.engine.io.stubs.SAMFileWriterStub@166ddfb7 
+INFO  16:55:20,717 ProgressMeter -            done   1.7610191E7    24.7 m      84.0 s      100.0%    24.7 m       0.0 s 
+INFO  16:55:20,718 ProgressMeter - Total runtime 1479.54 secs, 24.66 min, 0.41 hours 
+INFO  16:55:20,718 MicroScheduler - 0 reads were filtered out during the traversal out of approximately 17610191 total reads (0.00%) 
+INFO  16:55:20,718 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  16:55:20,718 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+---------------------------------------
+Clean up
+---------------------------------------
+Finished
+
+======================================================================================
+                  Resource Usage on 2022-02-09 17:55:25:
+   Job Id:             34964752.gadi-pbs
+   Project:            pq84
+   Exit Status:        0
+   Service Units:      24.53
+   NCPUs Requested:    10                     NCPUs Used: 10              
+                                           CPU Time Used: 02:52:37                                   
+   Memory Requested:   20.0GB                Memory Used: 20.0GB          
+   Walltime requested: 12:00:00            Walltime Used: 01:13:36        
+   JobFS requested:    20.0GB                 JobFS used: 0B              
+======================================================================================

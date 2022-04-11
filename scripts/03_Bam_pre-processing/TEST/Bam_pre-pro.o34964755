@@ -1,0 +1,259 @@
+---------------------------------------
+PBS: Job identifier is 34964755.gadi-pbs
+PBS: Job name is Bam_pre-pro
+---------------------------------------
+Define paths and load modules
+---------------------------------------
+---------------------------------------
+Change to working directory and set env variables
+---------------------------------------
+Sort and Index bam files
+mkdir: cannot create directory 'sorted': File exists
+[bam_sort_core] merging from 30 files and 10 in-memory blocks...
+---------------------------------------
+MarkDuplicates
+INFO	2022-02-09 15:46:48	MarkDuplicates	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    MarkDuplicates -AS TRUE -VALIDATION_STRINGENCY LENIENT -I /g/data/pq84/malaria/outputs/02_Mapping/sorted/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.sorted.bam -O /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.bam -M /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4_picard_metrics_file.txt
+**********
+
+
+15:46:49.333 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/picard/build/libs/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Wed Feb 09 15:46:49 GMT+10:00 2022] MarkDuplicates INPUT=[/g/data/pq84/malaria/outputs/02_Mapping/sorted/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.sorted.bam] OUTPUT=/g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.bam METRICS_FILE=/g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4_picard_metrics_file.txt ASSUME_SORTED=true VALIDATION_STRINGENCY=LENIENT    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag CLEAR_DT=true DUPLEX_UMI=false ADD_PG_TAG_TO_READS=true REMOVE_DUPLICATES=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 MAX_OPTICAL_DUPLICATE_SET_SIZE=300000 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Wed Feb 09 15:46:49 GMT+10:00 2022] Executing as jw1542@gadi-cpu-clx-0611.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.26.10-2-g4979a69-SNAPSHOT
+INFO	2022-02-09 15:46:50	MarkDuplicates	Start of doWork freeMemory: 2036049656; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2022-02-09 15:46:50	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2022-02-09 15:46:50	MarkDuplicates	Will retain up to 103736839 data points before spilling to disk.
+Ignoring SAM validation error: ERROR::HEADER_RECORD_MISSING_REQUIRED_TAG:File /g/data/pq84/malaria/outputs/02_Mapping/sorted/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.sorted.bam, Error parsing SAM header. @RG line missing SM tag. Line:
+@RG	ID:PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4	PL:ILLUMINA
+INFO	2022-02-09 15:47:19	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:28s.  Time for last 1,000,000:   28s.  Last read position: ordered_PKNH_02_v2:410,746
+INFO	2022-02-09 15:47:19	MarkDuplicates	Tracking 48996 as yet unmatched pairs. 449 records in RAM.
+INFO	2022-02-09 15:47:30	MarkDuplicates	Read     2,000,000 records.  Elapsed time: 00:00:39s.  Time for last 1,000,000:   10s.  Last read position: ordered_PKNH_03_v2:637,843
+INFO	2022-02-09 15:47:30	MarkDuplicates	Tracking 211183 as yet unmatched pairs. 127438 records in RAM.
+INFO	2022-02-09 15:47:35	MarkDuplicates	Read     3,000,000 records.  Elapsed time: 00:00:45s.  Time for last 1,000,000:    5s.  Last read position: ordered_PKNH_03_v2:637,860
+INFO	2022-02-09 15:47:35	MarkDuplicates	Tracking 884603 as yet unmatched pairs. 586926 records in RAM.
+INFO	2022-02-09 15:47:43	MarkDuplicates	Read     4,000,000 records.  Elapsed time: 00:00:53s.  Time for last 1,000,000:    7s.  Last read position: ordered_PKNH_03_v2:637,871
+INFO	2022-02-09 15:47:43	MarkDuplicates	Tracking 1318054 as yet unmatched pairs. 628630 records in RAM.
+INFO	2022-02-09 15:47:54	MarkDuplicates	Read     5,000,000 records.  Elapsed time: 00:01:03s.  Time for last 1,000,000:   10s.  Last read position: ordered_PKNH_03_v2:637,878
+INFO	2022-02-09 15:47:54	MarkDuplicates	Tracking 1199934 as yet unmatched pairs. 454730 records in RAM.
+INFO	2022-02-09 15:47:58	MarkDuplicates	Read     6,000,000 records.  Elapsed time: 00:01:07s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_03_v2:637,883
+INFO	2022-02-09 15:47:58	MarkDuplicates	Tracking 929810 as yet unmatched pairs. 119240 records in RAM.
+INFO	2022-02-09 15:48:03	MarkDuplicates	Read     7,000,000 records.  Elapsed time: 00:01:13s.  Time for last 1,000,000:    5s.  Last read position: ordered_PKNH_04_v2:234,960
+INFO	2022-02-09 15:48:03	MarkDuplicates	Tracking 859022 as yet unmatched pairs. 150671 records in RAM.
+INFO	2022-02-09 15:48:10	MarkDuplicates	Read     8,000,000 records.  Elapsed time: 00:01:19s.  Time for last 1,000,000:    6s.  Last read position: ordered_PKNH_04_v2:1,005,882
+INFO	2022-02-09 15:48:10	MarkDuplicates	Tracking 766132 as yet unmatched pairs. 1864 records in RAM.
+INFO	2022-02-09 15:48:13	MarkDuplicates	Read     9,000,000 records.  Elapsed time: 00:01:23s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_06_v2:345,492
+INFO	2022-02-09 15:48:13	MarkDuplicates	Tracking 778076 as yet unmatched pairs. 15230 records in RAM.
+INFO	2022-02-09 15:48:20	MarkDuplicates	Read    10,000,000 records.  Elapsed time: 00:01:30s.  Time for last 1,000,000:    7s.  Last read position: ordered_PKNH_07_v2:598,816
+INFO	2022-02-09 15:48:20	MarkDuplicates	Tracking 788401 as yet unmatched pairs. 18782 records in RAM.
+INFO	2022-02-09 15:48:24	MarkDuplicates	Read    11,000,000 records.  Elapsed time: 00:01:34s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_08_v2:344,961
+INFO	2022-02-09 15:48:24	MarkDuplicates	Tracking 790658 as yet unmatched pairs. 47943 records in RAM.
+INFO	2022-02-09 15:48:27	MarkDuplicates	Read    12,000,000 records.  Elapsed time: 00:01:37s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_08_v2:1,579,211
+INFO	2022-02-09 15:48:27	MarkDuplicates	Tracking 786109 as yet unmatched pairs. 13230 records in RAM.
+INFO	2022-02-09 15:49:04	MarkDuplicates	Read    13,000,000 records.  Elapsed time: 00:02:13s.  Time for last 1,000,000:   36s.  Last read position: ordered_PKNH_09_v2:930,375
+INFO	2022-02-09 15:49:04	MarkDuplicates	Tracking 773305 as yet unmatched pairs. 23372 records in RAM.
+INFO	2022-02-09 15:49:08	MarkDuplicates	Read    14,000,000 records.  Elapsed time: 00:02:18s.  Time for last 1,000,000:    4s.  Last read position: ordered_PKNH_10_v2:168,748
+INFO	2022-02-09 15:49:08	MarkDuplicates	Tracking 756997 as yet unmatched pairs. 45519 records in RAM.
+INFO	2022-02-09 15:49:12	MarkDuplicates	Read    15,000,000 records.  Elapsed time: 00:02:21s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_10_v2:1,227,383
+INFO	2022-02-09 15:49:12	MarkDuplicates	Tracking 738268 as yet unmatched pairs. 9751 records in RAM.
+INFO	2022-02-09 15:50:06	MarkDuplicates	Read    16,000,000 records.  Elapsed time: 00:03:16s.  Time for last 1,000,000:   54s.  Last read position: ordered_PKNH_11_v2:1,110,320
+INFO	2022-02-09 15:50:06	MarkDuplicates	Tracking 708776 as yet unmatched pairs. 49060 records in RAM.
+INFO	2022-02-09 15:50:10	MarkDuplicates	Read    17,000,000 records.  Elapsed time: 00:03:20s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_11_v2:1,842,517
+INFO	2022-02-09 15:50:10	MarkDuplicates	Tracking 838295 as yet unmatched pairs. 171930 records in RAM.
+INFO	2022-02-09 15:50:17	MarkDuplicates	Read    18,000,000 records.  Elapsed time: 00:03:27s.  Time for last 1,000,000:    7s.  Last read position: ordered_PKNH_12_v2:568,539
+INFO	2022-02-09 15:50:17	MarkDuplicates	Tracking 666643 as yet unmatched pairs. 249190 records in RAM.
+INFO	2022-02-09 15:50:27	MarkDuplicates	Read    19,000,000 records.  Elapsed time: 00:03:36s.  Time for last 1,000,000:    9s.  Last read position: ordered_PKNH_12_v2:1,277,621
+INFO	2022-02-09 15:50:27	MarkDuplicates	Tracking 476355 as yet unmatched pairs. 41404 records in RAM.
+INFO	2022-02-09 15:50:30	MarkDuplicates	Read    20,000,000 records.  Elapsed time: 00:03:40s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_12_v2:2,812,119
+INFO	2022-02-09 15:50:30	MarkDuplicates	Tracking 445677 as yet unmatched pairs. 5114 records in RAM.
+INFO	2022-02-09 15:50:34	MarkDuplicates	Read    21,000,000 records.  Elapsed time: 00:03:43s.  Time for last 1,000,000:    3s.  Last read position: ordered_PKNH_13_v2:986,657
+INFO	2022-02-09 15:50:34	MarkDuplicates	Tracking 426565 as yet unmatched pairs. 56118 records in RAM.
+INFO	2022-02-09 15:50:58	MarkDuplicates	Read    22,000,000 records.  Elapsed time: 00:04:08s.  Time for last 1,000,000:   24s.  Last read position: ordered_PKNH_13_v2:2,454,135
+INFO	2022-02-09 15:50:58	MarkDuplicates	Tracking 380649 as yet unmatched pairs. 5668 records in RAM.
+INFO	2022-02-09 15:51:06	MarkDuplicates	Read    23,000,000 records.  Elapsed time: 00:04:15s.  Time for last 1,000,000:    7s.  Last read position: ordered_PKNH_14_v2:1,608,760
+INFO	2022-02-09 15:51:06	MarkDuplicates	Tracking 341767 as yet unmatched pairs. 341079 records in RAM.
+INFO	2022-02-09 15:51:09	MarkDuplicates	Read    24,000,000 records.  Elapsed time: 00:04:18s.  Time for last 1,000,000:    2s.  Last read position: ordered_PKNH_14_v2:2,077,934
+INFO	2022-02-09 15:51:09	MarkDuplicates	Tracking 72244 as yet unmatched pairs. 71556 records in RAM.
+INFO	2022-02-09 15:51:22	MarkDuplicates	Read 24980704 records. 0 pairs never matched.
+INFO	2022-02-09 15:52:01	MarkDuplicates	After buildSortedReadEndLists freeMemory: 10281931584; totalMemory: 13614710784; maxMemory: 28631367680
+INFO	2022-02-09 15:52:01	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2022-02-09 15:52:02	MarkDuplicates	Traversing read pair information and detecting duplicates.
+
+------------------------------------------------------------------------
+Job 34964755 has exceeded memory allocation on node gadi-cpu-clx-0611.gadi.nci.org.au
+Process "bash", pid 3729512, rss 3272704, vmem 21688320
+Process "34964755.gadi-p", pid 3729570, rss 3018752, vmem 10166272
+Process "java", pid 3731676, rss 21415456768, vmem 47068258304
+------------------------------------------------------------------------
+For more information visit https://opus.nci.org.au/x/SwGRAQ
+------------------------------------------------------------------------
+/local/spool/pbs/mom_priv/jobs/34964755.gadi-pbs.SC: line 48: 3731676 Killed                  java -Djava.iodir=$PBS_JOBFS -jar $PICARD MarkDuplicates AS=TRUE VALIDATION_STRINGENCY=LENIENT I=$INDIR/sorted/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.sorted.bam O=$OUTDIR/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.bam M=$OUTDIR/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4_picard_metrics_file.txt
+---------------------------------------
+Change header @RG and index
+[E::hts_open_format] Failed to open file "/g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.bam" : No such file or directory
+samtools view: failed to open "/g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.bam" for reading: No such file or directory
+[main_reheader] failed to read the header for '-'.
+samtools index: "/g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.reheader.bam" is in a format that cannot be usefully indexed
+---------------------------------------
+RealignerTargetCreator
+INFO  15:52:42,985 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:42,988 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  15:52:42,988 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  15:52:42,988 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  15:52:42,988 HelpFormatter - [Wed Feb 09 15:52:42 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  15:52:42,988 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  15:52:42,992 HelpFormatter - Program Args: -T RealignerTargetCreator -nt 10 -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -I /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.reheader.bam --intervals /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -known /g/data/pq84/malaria/data/ref_genomes/variants/TRUE_INDELs.vcf -o /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigner.intervals 
+INFO  15:52:43,006 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0611.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  15:52:43,007 HelpFormatter - Date/Time: 2022/02/09 15:52:42 
+INFO  15:52:43,007 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:43,007 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:43,032 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  15:52:43,053 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  15:52:43,054 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  15:52:43,054 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  15:52:43,274 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  15:52:43,281 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  15:52:43,298 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.02 
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 3.8-1-0-gf15c1c3ef): 
+##### ERROR
+##### ERROR This means that one or more arguments or inputs in your command are incorrect.
+##### ERROR The error message below tells you what is the problem.
+##### ERROR
+##### ERROR If the problem is an invalid argument, please check the online documentation guide
+##### ERROR (or rerun your command with --help) to view allowable command-line arguments for this tool.
+##### ERROR
+##### ERROR Visit our website and forum for extensive documentation and answers to 
+##### ERROR commonly asked questions https://software.broadinstitute.org/gatk
+##### ERROR
+##### ERROR Please do NOT post this error to the GATK forum unless you have really tried to fix it yourself.
+##### ERROR
+##### ERROR MESSAGE: SAM/BAM/CRAM file /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.reheader.bam is malformed. Please see https://software.broadinstitute.org/gatk/documentation/article?id=1317for more information. Error details: SAM file doesn't have any read groups defined in the header.  The GATK no longer supports SAM files without read groups
+##### ERROR ------------------------------------------------------------------------------------------
+---------------------------------------
+IndelRealigner
+INFO  15:52:44,722 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:44,724 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  15:52:44,725 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  15:52:44,725 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  15:52:44,725 HelpFormatter - [Wed Feb 09 15:52:44 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  15:52:44,725 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  15:52:44,729 HelpFormatter - Program Args: -T IndelRealigner --consensusDeterminationModel KNOWNS_ONLY -LOD 0.4 -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -I /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.reheader.bam --intervals /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -known /g/data/pq84/malaria/data/ref_genomes/variants/TRUE_INDELs.vcf -targetIntervals /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigner.intervals -o /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.bam 
+INFO  15:52:44,734 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0611.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  15:52:44,734 HelpFormatter - Date/Time: 2022/02/09 15:52:44 
+INFO  15:52:44,734 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:44,734 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:44,795 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  15:52:44,815 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  15:52:44,815 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  15:52:44,816 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  15:52:44,927 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  15:52:44,931 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  15:52:44,943 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.01 
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 3.8-1-0-gf15c1c3ef): 
+##### ERROR
+##### ERROR This means that one or more arguments or inputs in your command are incorrect.
+##### ERROR The error message below tells you what is the problem.
+##### ERROR
+##### ERROR If the problem is an invalid argument, please check the online documentation guide
+##### ERROR (or rerun your command with --help) to view allowable command-line arguments for this tool.
+##### ERROR
+##### ERROR Visit our website and forum for extensive documentation and answers to 
+##### ERROR commonly asked questions https://software.broadinstitute.org/gatk
+##### ERROR
+##### ERROR Please do NOT post this error to the GATK forum unless you have really tried to fix it yourself.
+##### ERROR
+##### ERROR MESSAGE: SAM/BAM/CRAM file /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.reheader.bam is malformed. Please see https://software.broadinstitute.org/gatk/documentation/article?id=1317for more information. Error details: SAM file doesn't have any read groups defined in the header.  The GATK no longer supports SAM files without read groups
+##### ERROR ------------------------------------------------------------------------------------------
+---------------------------------------
+BaseRecalibrator - create recal table
+INFO  15:52:46,449 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:46,451 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  15:52:46,451 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  15:52:46,451 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  15:52:46,451 HelpFormatter - [Wed Feb 09 15:52:46 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  15:52:46,451 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  15:52:46,454 HelpFormatter - Program Args: -T BaseRecalibrator -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -I /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.bam --intervals /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -knownSites /g/data/pq84/malaria/data/ref_genomes/variants/TRUE_consensus.vcf -o /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.table 
+INFO  15:52:46,459 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0611.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  15:52:46,460 HelpFormatter - Date/Time: 2022/02/09 15:52:46 
+INFO  15:52:46,460 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:46,460 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:46,529 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  15:52:46,556 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  15:52:46,556 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  15:52:46,556 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  15:52:46,680 GenomeAnalysisEngine - Downsampling Settings: No downsampling 
+INFO  15:52:46,684 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 3.8-1-0-gf15c1c3ef): 
+##### ERROR
+##### ERROR This means that one or more arguments or inputs in your command are incorrect.
+##### ERROR The error message below tells you what is the problem.
+##### ERROR
+##### ERROR If the problem is an invalid argument, please check the online documentation guide
+##### ERROR (or rerun your command with --help) to view allowable command-line arguments for this tool.
+##### ERROR
+##### ERROR Visit our website and forum for extensive documentation and answers to 
+##### ERROR commonly asked questions https://software.broadinstitute.org/gatk
+##### ERROR
+##### ERROR Please do NOT post this error to the GATK forum unless you have really tried to fix it yourself.
+##### ERROR
+##### ERROR MESSAGE: Could not read file /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.bam because java.io.FileNotFoundException: /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.bam (No such file or directory)
+##### ERROR ------------------------------------------------------------------------------------------
+---------------------------------------
+PrintReads - get recal reads
+INFO  15:52:48,027 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:48,030 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  15:52:48,030 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  15:52:48,031 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  15:52:48,031 HelpFormatter - [Wed Feb 09 15:52:48 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  15:52:48,031 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  15:52:48,034 HelpFormatter - Program Args: -T PrintReads -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta --intervals /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -I /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.bam -BQSR /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.table -o /g/data/pq84/malaria/outputs/03_Bam-pre/final_bam/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.bam 
+INFO  15:52:48,038 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0611.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  15:52:48,039 HelpFormatter - Date/Time: 2022/02/09 15:52:48 
+INFO  15:52:48,039 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:48,039 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  15:52:48,096 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  15:52:48,113 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  15:52:48,113 GenomeAnalysisEngine - Inflater: IntelInflater 
+##### ERROR ------------------------------------------------------------------------------------------
+##### ERROR A USER ERROR has occurred (version 3.8-1-0-gf15c1c3ef): 
+##### ERROR
+##### ERROR This means that one or more arguments or inputs in your command are incorrect.
+##### ERROR The error message below tells you what is the problem.
+##### ERROR
+##### ERROR If the problem is an invalid argument, please check the online documentation guide
+##### ERROR (or rerun your command with --help) to view allowable command-line arguments for this tool.
+##### ERROR
+##### ERROR Visit our website and forum for extensive documentation and answers to 
+##### ERROR commonly asked questions https://software.broadinstitute.org/gatk
+##### ERROR
+##### ERROR Please do NOT post this error to the GATK forum unless you have really tried to fix it yourself.
+##### ERROR
+##### ERROR MESSAGE: The BQSR recalibration file, /g/data/pq84/malaria/outputs/03_Bam-pre/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.table, does not exist
+##### ERROR ------------------------------------------------------------------------------------------
+---------------------------------------
+Clean up
+---------------------------------------
+Finished
+
+======================================================================================
+                  Resource Usage on 2022-02-09 16:52:50:
+   Job Id:             34964755.gadi-pbs
+   Project:            pq84
+   Exit Status:        0
+   Service Units:      3.60
+   NCPUs Requested:    10                     NCPUs Used: 10              
+                                           CPU Time Used: 01:06:20                                   
+   Memory Requested:   20.0GB                Memory Used: 20.0GB          
+   Walltime requested: 12:00:00            Walltime Used: 00:10:48        
+   JobFS requested:    20.0GB                 JobFS used: 0B              
+======================================================================================

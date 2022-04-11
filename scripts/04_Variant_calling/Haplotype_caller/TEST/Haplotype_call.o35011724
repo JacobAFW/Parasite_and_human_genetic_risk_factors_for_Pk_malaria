@@ -1,0 +1,510 @@
+---------------------------------------
+PBS: Job identifier is 35011724.gadi-pbs
+PBS: Job name is Haplotype_call
+---------------------------------------
+Define paths and load modules
+---------------------------------------
+---------------------------------------
+Change to working directory and set env variables
+---------------------------------------------------------------------------------------------------------------------
+GATK
+---------------------------------------------------------------------------------------------------------------------
+INFO  10:47:33,649 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  10:47:33,651 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  10:47:33,651 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  10:47:33,651 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  10:47:33,651 HelpFormatter - [Thu Feb 10 10:47:33 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  10:47:33,651 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  10:47:33,653 HelpFormatter - Program Args: -T HaplotypeCaller -ERC GVCF --minPruning 3 --maxNumHaplotypesInPopulation 200 --max_alternate_alleles 3 --variant_index_type LINEAR --variant_index_parameter 128000 -contamination 0.0 -G Standard -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -I /g/data/pq84/malaria/outputs/03_Bam-pre/final_bam/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.bam -o /g/data/pq84/malaria/outputs/04_Variant_calling/haplotype_call/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.g.vcf.gz 
+INFO  10:47:33,658 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0179.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  10:47:33,658 HelpFormatter - Date/Time: 2022/02/10 10:47:33 
+INFO  10:47:33,658 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  10:47:33,658 HelpFormatter - ------------------------------------------------------------------------------------------- 
+WARN  10:47:33,660 GATKVCFUtils - Naming your output file using the .g.vcf extension will automatically set the appropriate values  for --variant_index_type and --variant_index_parameter 
+WARN  10:47:33,661 GATKVCFUtils - Creating Tabix index for /g/data/pq84/malaria/outputs/04_Variant_calling/haplotype_call/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.g.vcf.gz, ignoring user-specified index type and parameter 
+INFO  10:47:33,677 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  10:47:33,700 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  10:47:33,700 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  10:47:33,700 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  10:47:33,821 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 500 
+INFO  10:47:33,825 SAMDataSource$SAMReaders - Initializing SAMRecords in serial 
+INFO  10:47:33,932 SAMDataSource$SAMReaders - Done initializing BAM readers: total time 0.11 
+INFO  10:47:33,963 HCMappingQualityFilter - Filtering out reads with MAPQ < 20 
+INFO  10:47:34,036 GenomeAnalysisEngine - Preparing for traversal over 1 BAM files 
+INFO  10:47:34,051 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  10:47:34,051 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  10:47:34,051 ProgressMeter -                 |      processed |    time |         per 1M |           |   total | remaining 
+INFO  10:47:34,051 ProgressMeter -        Location | active regions | elapsed | active regions | completed | runtime |   runtime 
+INFO  10:47:34,052 HaplotypeCaller - Standard Emitting and Calling confidence set to 0.0 for reference-model confidence output 
+INFO  10:47:34,052 HaplotypeCaller - All sites annotated with PLs forced to true for reference-model confidence output 
+WARN  10:47:34,077 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+INFO  10:47:34,300 HaplotypeCaller - Using global mismapping rate of 45 => -4.5 in log10 likelihood units 
+INFO  10:47:34,573 NativeLibraryLoader - Loading libgkl_utils.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_utils.so 
+INFO  10:47:34,574 NativeLibraryLoader - Loading libgkl_pairhmm_omp.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_pairhmm_omp.so 
+INFO  10:47:34,600 VectorLoglessPairHMM - Using OpenMP multi-threaded AVX-accelerated native PairHMM implementation 
+INFO  10:47:34,600 IntelPairHmm - Using CPU-supported AVX-512 instructions 
+WARN  10:47:34,600 IntelPairHmm - Flush-to-zero (FTZ) is enabled when running PairHMM 
+INFO  10:47:34,600 IntelPairHmm - Available threads: 1 
+INFO  10:47:34,600 IntelPairHmm - Requested threads: 1 
+WARN  10:47:34,644 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not HaplotypeCaller 
+WARN  10:47:35,719 AnnotationUtils - Annotation will not be calculated, genotype is not called 
+INFO  10:48:04,055 ProgressMeter - ordered_PKNH_01_v2:104697              0.0    30.0 s           49.6 w        0.4%   116.1 m     115.6 m 
+INFO  10:48:34,057 ProgressMeter - ordered_PKNH_01_v2:192957              0.0    60.0 s           99.2 w        0.8%     2.1 h       2.1 h 
+INFO  10:49:04,058 ProgressMeter - ordered_PKNH_01_v2:264468              0.0    90.0 s          148.8 w        1.1%     2.3 h       2.3 h 
+INFO  10:49:34,060 ProgressMeter - ordered_PKNH_01_v2:314885              0.0   120.0 s          198.4 w        1.3%     2.6 h       2.5 h 
+WARN  10:49:36,780 HaplotypeCallerGenotypingEngine - location ordered_PKNH_01_v2:318949-318950: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: C. 
+INFO  10:50:04,062 ProgressMeter - ordered_PKNH_01_v2:377443              0.0     2.5 m          248.0 w        1.6%     2.7 h       2.6 h 
+INFO  10:50:34,063 ProgressMeter - ordered_PKNH_01_v2:426837              0.0     3.0 m          297.6 w        1.8%     2.8 h       2.8 h 
+INFO  10:51:04,065 ProgressMeter - ordered_PKNH_01_v2:468397              0.0     3.5 m          347.2 w        1.9%     3.0 h       3.0 h 
+INFO  10:51:34,066 ProgressMeter - ordered_PKNH_01_v2:505134              0.0     4.0 m          396.9 w        2.1%     3.2 h       3.1 h 
+WARN  10:51:53,891 HaplotypeCallerGenotypingEngine - location ordered_PKNH_01_v2:526345-526351: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATTT. 
+INFO  10:52:04,068 ProgressMeter - ordered_PKNH_01_v2:535748              0.0     4.5 m          446.5 w        2.2%     3.4 h       3.3 h 
+INFO  10:52:34,069 ProgressMeter - ordered_PKNH_01_v2:594597              0.0     5.0 m          496.1 w        2.4%     3.4 h       3.3 h 
+WARN  10:53:00,826 HaplotypeCallerGenotypingEngine - location ordered_PKNH_01_v2:672323: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TCGTGTTGAA. 
+INFO  10:53:04,070 ProgressMeter - ordered_PKNH_01_v2:680892              0.0     5.5 m          545.7 w        2.8%     3.3 h       3.2 h 
+INFO  10:53:34,071 ProgressMeter - ordered_PKNH_01_v2:730643              0.0     6.0 m          595.3 w        3.0%     3.3 h       3.2 h 
+INFO  10:54:04,073 ProgressMeter - ordered_PKNH_01_v2:781253              0.0     6.5 m          644.9 w        3.2%     3.4 h       3.3 h 
+WARN  10:54:26,833 HaplotypeCallerGenotypingEngine - location ordered_PKNH_01_v2:825687: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CCACA. 
+INFO  10:54:34,075 ProgressMeter - ordered_PKNH_01_v2:846837              0.0     7.0 m          694.5 w        3.5%     3.4 h       3.2 h 
+INFO  10:55:04,076 ProgressMeter - ordered_PKNH_02_v2:55345         892570.0     7.5 m            8.4 m        3.9%     3.2 h       3.1 h 
+WARN  10:55:07,716 HaplotypeCallerGenotypingEngine - location ordered_PKNH_02_v2:66893: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: A. 
+INFO  10:55:34,077 ProgressMeter - ordered_PKNH_02_v2:165178         892570.0     8.0 m            9.0 m        4.3%     3.1 h       2.9 h 
+WARN  10:55:52,085 HaplotypeCallerGenotypingEngine - location ordered_PKNH_02_v2:187915: too many alternative alleles found (6) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GGTGTGT, GGTGTGTGTGTGTGTGTGTGT, GGTGTGTGTGTGTGTGTGT. 
+INFO  10:56:04,078 ProgressMeter - ordered_PKNH_02_v2:210205         892570.0     8.5 m            9.5 m        4.5%     3.1 h       3.0 h 
+WARN  10:56:19,518 HaplotypeCallerGenotypingEngine - location ordered_PKNH_02_v2:239976: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATTTTTTT. 
+INFO  10:56:34,080 ProgressMeter - ordered_PKNH_02_v2:262142         892570.0     9.0 m           10.1 m        4.7%     3.2 h       3.0 h 
+INFO  10:57:04,082 ProgressMeter - ordered_PKNH_02_v2:326167         892570.0     9.5 m           10.6 m        5.0%     3.2 h       3.0 h 
+INFO  10:57:34,084 ProgressMeter - ordered_PKNH_02_v2:403825         892570.0    10.0 m           11.2 m        5.3%     3.1 h       3.0 h 
+INFO  10:58:04,086 ProgressMeter - ordered_PKNH_02_v2:459741         892570.0    10.5 m           11.8 m        5.6%     3.1 h       3.0 h 
+WARN  10:58:31,748 HaplotypeCallerGenotypingEngine - location ordered_PKNH_02_v2:506128-506134: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CAAA. 
+INFO  10:58:34,087 ProgressMeter - ordered_PKNH_02_v2:508863         892570.0    11.0 m           12.3 m        5.8%     3.2 h       3.0 h 
+INFO  10:59:04,088 ProgressMeter - ordered_PKNH_02_v2:584268         892570.0    11.5 m           12.9 m        6.1%     3.2 h       3.0 h 
+INFO  10:59:34,153 ProgressMeter - ordered_PKNH_02_v2:674097         892570.0    12.0 m           13.4 m        6.4%     3.1 h       2.9 h 
+INFO  11:00:04,256 ProgressMeter - ordered_PKNH_03_v2:19902        1680216.0    12.5 m            7.4 m        7.0%     3.0 h       2.8 h 
+INFO  11:00:34,294 ProgressMeter - ordered_PKNH_03_v2:97142        1680216.0    13.0 m            7.7 m        7.3%     3.0 h       2.7 h 
+INFO  11:01:04,295 ProgressMeter - ordered_PKNH_03_v2:147300        1680216.0    13.5 m            8.0 m        7.5%     3.0 h       2.8 h 
+WARN  11:01:24,612 HaplotypeCallerGenotypingEngine - location ordered_PKNH_03_v2:179982: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GCCAAACTGTACCACTGCCAAACTGTACCACTGCCAACCTGTACCACTGCCAAACTGTACCACTA. 
+WARN  11:01:33,939 HaplotypeCallerGenotypingEngine - location ordered_PKNH_03_v2:195866: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GCCTCCAAACATGACCAATCTA. 
+INFO  11:01:34,404 ProgressMeter - ordered_PKNH_03_v2:198278        1680216.0    14.0 m            8.3 m        7.7%     3.0 h       2.8 h 
+INFO  11:02:04,405 ProgressMeter - ordered_PKNH_03_v2:255765        1680216.0    14.5 m            8.6 m        8.0%     3.0 h       2.8 h 
+INFO  11:02:34,406 ProgressMeter - ordered_PKNH_03_v2:313913        1680216.0    15.0 m            8.9 m        8.2%     3.0 h       2.8 h 
+INFO  11:03:04,408 ProgressMeter - ordered_PKNH_03_v2:363664        1680216.0    15.5 m            9.2 m        8.4%     3.1 h       2.8 h 
+INFO  11:03:34,410 ProgressMeter - ordered_PKNH_03_v2:416565        1680216.0    16.0 m            9.5 m        8.6%     3.1 h       2.8 h 
+INFO  11:04:04,411 ProgressMeter - ordered_PKNH_03_v2:470325        1680216.0    16.5 m            9.8 m        8.8%     3.1 h       2.8 h 
+INFO  11:04:34,412 ProgressMeter - ordered_PKNH_03_v2:528405        1680216.0    17.0 m           10.1 m        9.1%     3.1 h       2.8 h 
+INFO  11:05:04,414 ProgressMeter - ordered_PKNH_03_v2:615076        1680216.0    17.5 m           10.4 m        9.4%     3.1 h       2.8 h 
+INFO  11:05:34,415 ProgressMeter - ordered_PKNH_03_v2:680055        1680216.0    18.0 m           10.7 m        9.7%     3.1 h       2.8 h 
+INFO  11:06:04,417 ProgressMeter - ordered_PKNH_03_v2:773525        1680216.0    18.5 m           11.0 m       10.1%     3.1 h       2.7 h 
+INFO  11:06:34,450 ProgressMeter - ordered_PKNH_03_v2:817935        1680216.0    19.0 m           11.3 m       10.3%     3.1 h       2.8 h 
+INFO  11:07:04,452 ProgressMeter - ordered_PKNH_03_v2:880341        1680216.0    19.5 m           11.6 m       10.5%     3.1 h       2.8 h 
+INFO  11:07:34,453 ProgressMeter - ordered_PKNH_03_v2:934092        1680216.0    20.0 m           11.9 m       10.7%     3.1 h       2.8 h 
+INFO  11:08:04,454 ProgressMeter - ordered_PKNH_03_v2:990998        1680216.0    20.5 m           12.2 m       11.0%     3.1 h       2.8 h 
+INFO  11:08:34,455 ProgressMeter - ordered_PKNH_04_v2:85391        2730786.0    21.0 m            7.7 m       11.6%     3.0 h       2.7 h 
+INFO  11:09:04,456 ProgressMeter - ordered_PKNH_04_v2:145578        2730786.0    21.5 m            7.9 m       11.8%     3.0 h       2.7 h 
+INFO  11:09:34,457 ProgressMeter - ordered_PKNH_04_v2:210960        2730786.0    22.0 m            8.1 m       12.1%     3.0 h       2.7 h 
+INFO  11:10:04,458 ProgressMeter - ordered_PKNH_04_v2:299841        2730786.0    22.5 m            8.2 m       12.5%     3.0 h       2.6 h 
+INFO  11:10:34,460 ProgressMeter - ordered_PKNH_04_v2:373400        2730786.0    23.0 m            8.4 m       12.8%     3.0 h       2.6 h 
+INFO  11:11:04,461 ProgressMeter - ordered_PKNH_04_v2:435623        2730786.0    23.5 m            8.6 m       13.0%     3.0 h       2.6 h 
+WARN  11:11:28,218 HaplotypeCallerGenotypingEngine - location ordered_PKNH_04_v2:507835: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: AATCGTTAAACATCGTTAAACACCGTTAAACATCGTTAAACATCGTTAAACACCGTTAAACATCGTTAAAC. 
+INFO  11:11:34,462 ProgressMeter - ordered_PKNH_04_v2:519134        2730786.0    24.0 m            8.8 m       13.4%     3.0 h       2.6 h 
+INFO  11:12:04,463 ProgressMeter - ordered_PKNH_04_v2:579294        2730786.0    24.5 m            9.0 m       13.6%     3.0 h       2.6 h 
+INFO  11:12:34,465 ProgressMeter - ordered_PKNH_04_v2:620756        2730786.0    25.0 m            9.2 m       13.8%     3.0 h       2.6 h 
+INFO  11:13:04,466 ProgressMeter - ordered_PKNH_04_v2:680443        2730786.0    25.5 m            9.3 m       14.0%     3.0 h       2.6 h 
+INFO  11:13:34,467 ProgressMeter - ordered_PKNH_04_v2:752436        2730786.0    26.0 m            9.5 m       14.3%     3.0 h       2.6 h 
+INFO  11:14:04,485 ProgressMeter - ordered_PKNH_04_v2:836328        2730786.0    26.5 m            9.7 m       14.7%     3.0 h       2.6 h 
+INFO  11:14:34,487 ProgressMeter - ordered_PKNH_04_v2:874635        2730786.0    27.0 m            9.9 m       14.8%     3.0 h       2.6 h 
+INFO  11:15:04,664 ProgressMeter - ordered_PKNH_04_v2:921937        2730786.0    27.5 m           10.1 m       15.0%     3.1 h       2.6 h 
+WARN  11:15:23,822 HaplotypeCallerGenotypingEngine - location ordered_PKNH_04_v2:961018: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TTC. 
+INFO  11:15:34,665 ProgressMeter - ordered_PKNH_04_v2:990897        2730786.0    28.0 m           10.3 m       15.3%     3.0 h       2.6 h 
+INFO  11:16:04,674 ProgressMeter - ordered_PKNH_04_v2:1045273        2730786.0    28.5 m           10.4 m       15.5%     3.1 h       2.6 h 
+INFO  11:16:34,697 ProgressMeter - ordered_PKNH_04_v2:1101481        2730786.0    29.0 m           10.6 m       15.8%     3.1 h       2.6 h 
+WARN  11:16:44,120 HaplotypeCallerGenotypingEngine - location ordered_PKNH_04_v2:1111029: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GTT. 
+WARN  11:16:59,343 HaplotypeCallerGenotypingEngine - location ordered_PKNH_05_v2:57314: too many alternative alleles found (5) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GGGTTTAGGTTTAGGGTTTAGGGTTTA, GGGTTTAGGTTTAGGGTTCAGGGTTTA. 
+INFO  11:17:04,708 ProgressMeter - ordered_PKNH_05_v2:65713        3862810.0    29.5 m            7.6 m       16.2%     3.0 h       2.6 h 
+INFO  11:17:34,711 ProgressMeter - ordered_PKNH_05_v2:114360        3862810.0    30.0 m            7.8 m       16.4%     3.1 h       2.6 h 
+INFO  11:18:04,714 ProgressMeter - ordered_PKNH_05_v2:173856        3862810.0    30.5 m            7.9 m       16.6%     3.1 h       2.6 h 
+INFO  11:18:34,741 ProgressMeter - ordered_PKNH_05_v2:262092        3862810.0    31.0 m            8.0 m       17.0%     3.0 h       2.5 h 
+INFO  11:19:04,743 ProgressMeter - ordered_PKNH_05_v2:341087        3862810.0    31.5 m            8.2 m       17.3%     3.0 h       2.5 h 
+INFO  11:19:34,744 ProgressMeter - ordered_PKNH_05_v2:441003        3862810.0    32.0 m            8.3 m       17.7%     3.0 h       2.5 h 
+INFO  11:20:04,745 ProgressMeter - ordered_PKNH_05_v2:498341        3862810.0    32.5 m            8.4 m       17.9%     3.0 h       2.5 h 
+INFO  11:20:34,746 ProgressMeter - ordered_PKNH_05_v2:562433        3862810.0    33.0 m            8.5 m       18.2%     3.0 h       2.5 h 
+INFO  11:21:04,747 ProgressMeter - ordered_PKNH_05_v2:620261        3862810.0    33.5 m            8.7 m       18.4%     3.0 h       2.5 h 
+INFO  11:21:34,748 ProgressMeter - ordered_PKNH_05_v2:694391        3862810.0    34.0 m            8.8 m       18.7%     3.0 h       2.5 h 
+WARN  11:21:38,022 HaplotypeCallerGenotypingEngine - location ordered_PKNH_05_v2:697644: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GTTTTT. 
+INFO  11:22:04,749 ProgressMeter - ordered_PKNH_05_v2:750126        3862810.0    34.5 m            8.9 m       19.0%     3.0 h       2.5 h 
+INFO  11:22:34,750 ProgressMeter - ordered_PKNH_06_v2:46868        4645255.0    35.0 m            7.5 m       19.3%     3.0 h       2.4 h 
+INFO  11:23:04,751 ProgressMeter - ordered_PKNH_06_v2:104085        4645255.0    35.5 m            7.6 m       19.5%     3.0 h       2.4 h 
+INFO  11:23:34,752 ProgressMeter - ordered_PKNH_06_v2:150689        4645255.0    36.0 m            7.8 m       19.7%     3.0 h       2.4 h 
+INFO  11:24:04,753 ProgressMeter - ordered_PKNH_06_v2:193129        4645255.0    36.5 m            7.9 m       19.9%     3.1 h       2.4 h 
+INFO  11:24:34,757 ProgressMeter - ordered_PKNH_06_v2:253707        4645255.0    37.0 m            8.0 m       20.1%     3.1 h       2.4 h 
+WARN  11:24:50,648 HaplotypeCallerGenotypingEngine - location ordered_PKNH_06_v2:313612: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CCACACA. 
+WARN  11:25:01,563 HaplotypeCallerGenotypingEngine - location ordered_PKNH_06_v2:354869-354872: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CAAAA. 
+INFO  11:25:04,786 ProgressMeter - ordered_PKNH_06_v2:356766        4645255.0    37.5 m            8.1 m       20.6%     3.0 h       2.4 h 
+INFO  11:25:34,787 ProgressMeter - ordered_PKNH_06_v2:425942        4645255.0    38.0 m            8.2 m       20.9%     3.0 h       2.4 h 
+INFO  11:26:04,788 ProgressMeter - ordered_PKNH_06_v2:474380        4645255.0    38.5 m            8.3 m       21.1%     3.0 h       2.4 h 
+INFO  11:26:34,789 ProgressMeter - ordered_PKNH_06_v2:523428        4645255.0    39.0 m            8.4 m       21.3%     3.1 h       2.4 h 
+INFO  11:27:04,790 ProgressMeter - ordered_PKNH_06_v2:575332        4645255.0    39.5 m            8.5 m       21.5%     3.1 h       2.4 h 
+INFO  11:27:34,791 ProgressMeter - ordered_PKNH_06_v2:683824        4645255.0    40.0 m            8.6 m       21.9%     3.0 h       2.4 h 
+INFO  11:28:04,793 ProgressMeter - ordered_PKNH_06_v2:748047        4645255.0    40.5 m            8.7 m       22.2%     3.0 h       2.4 h 
+INFO  11:28:34,794 ProgressMeter - ordered_PKNH_06_v2:821497        4645255.0    41.0 m            8.8 m       22.5%     3.0 h       2.4 h 
+INFO  11:29:14,795 ProgressMeter - ordered_PKNH_06_v2:914572        4645255.0    41.7 m            9.0 m       22.9%     3.0 h       2.3 h 
+INFO  11:29:44,796 ProgressMeter - ordered_PKNH_06_v2:999991        4645255.0    42.2 m            9.1 m       23.2%     3.0 h       2.3 h 
+INFO  11:30:14,803 ProgressMeter - ordered_PKNH_07_v2:48193        5725911.0    42.7 m            7.5 m       23.7%     3.0 h       2.3 h 
+INFO  11:30:44,804 ProgressMeter - ordered_PKNH_07_v2:141646        5725911.0    43.2 m            7.5 m       24.1%     3.0 h       2.3 h 
+WARN  11:30:50,609 HaplotypeCallerGenotypingEngine - location ordered_PKNH_07_v2:155847: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTTTTTT. 
+INFO  11:31:14,805 ProgressMeter - ordered_PKNH_07_v2:222007        5725911.0    43.7 m            7.6 m       24.5%     3.0 h       2.2 h 
+INFO  11:31:44,806 ProgressMeter - ordered_PKNH_07_v2:274976        5725911.0    44.2 m            7.7 m       24.7%     3.0 h       2.2 h 
+WARN  11:31:59,069 HaplotypeCallerGenotypingEngine - location ordered_PKNH_07_v2:302224: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CAGTTG. 
+INFO  11:32:14,807 ProgressMeter - ordered_PKNH_07_v2:352365        5725911.0    44.7 m            7.8 m       25.0%     3.0 h       2.2 h 
+WARN  11:32:28,733 HaplotypeCallerGenotypingEngine - location ordered_PKNH_07_v2:377886-377901: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: T. 
+INFO  11:32:44,808 ProgressMeter - ordered_PKNH_07_v2:413758        5725911.0    45.2 m            7.9 m       25.2%     3.0 h       2.2 h 
+INFO  11:33:14,809 ProgressMeter - ordered_PKNH_07_v2:483952        5725911.0    45.7 m            8.0 m       25.5%     3.0 h       2.2 h 
+WARN  11:33:20,066 HaplotypeCallerGenotypingEngine - location ordered_PKNH_07_v2:500541: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TA. 
+INFO  11:33:44,810 ProgressMeter - ordered_PKNH_07_v2:561401        5725911.0    46.2 m            8.1 m       25.9%     3.0 h       2.2 h 
+INFO  11:34:14,811 ProgressMeter - ordered_PKNH_07_v2:628312        5725911.0    46.7 m            8.2 m       26.1%     3.0 h       2.2 h 
+INFO  11:34:54,812 ProgressMeter - ordered_PKNH_07_v2:702583        5725911.0    47.3 m            8.3 m       26.4%     3.0 h       2.2 h 
+INFO  11:35:24,813 ProgressMeter - ordered_PKNH_07_v2:769446        5725911.0    47.8 m            8.4 m       26.7%     3.0 h       2.2 h 
+WARN  11:35:33,537 HaplotypeCallerGenotypingEngine - location ordered_PKNH_07_v2:784008: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAAA. 
+INFO  11:35:54,814 ProgressMeter - ordered_PKNH_07_v2:819124        5725911.0    48.3 m            8.4 m       26.9%     3.0 h       2.2 h 
+INFO  11:36:24,815 ProgressMeter - ordered_PKNH_07_v2:884760        5725911.0    48.8 m            8.5 m       27.2%     3.0 h       2.2 h 
+INFO  11:36:54,826 ProgressMeter - ordered_PKNH_07_v2:938888        5725911.0    49.3 m            8.6 m       27.4%     3.0 h       2.2 h 
+INFO  11:37:24,826 ProgressMeter - ordered_PKNH_07_v2:988101        5725911.0    49.8 m            8.7 m       27.6%     3.0 h       2.2 h 
+INFO  11:37:54,827 ProgressMeter - ordered_PKNH_07_v2:1059318        5725911.0    50.3 m            8.8 m       27.9%     3.0 h       2.2 h 
+INFO  11:38:24,829 ProgressMeter - ordered_PKNH_07_v2:1134094        5725911.0    50.8 m            8.9 m       28.2%     3.0 h       2.2 h 
+WARN  11:38:28,551 HaplotypeCallerGenotypingEngine - location ordered_PKNH_07_v2:1136917-1136919: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TTGCATATCAGACAATTACC. 
+INFO  11:38:54,831 ProgressMeter - ordered_PKNH_07_v2:1182942        5725911.0    51.3 m            9.0 m       28.4%     3.0 h       2.2 h 
+WARN  11:39:21,587 HaplotypeCallerGenotypingEngine - location ordered_PKNH_07_v2:1252778-1252784: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: G. 
+INFO  11:39:34,831 ProgressMeter - ordered_PKNH_07_v2:1280921        5725911.0    52.0 m            9.1 m       28.8%     3.0 h       2.1 h 
+INFO  11:40:04,833 ProgressMeter - ordered_PKNH_07_v2:1371382        5725911.0    52.5 m            9.2 m       29.2%     3.0 h       2.1 h 
+INFO  11:40:34,871 ProgressMeter - ordered_PKNH_07_v2:1416508        5725911.0    53.0 m            9.3 m       29.4%     3.0 h       2.1 h 
+WARN  11:40:44,191 HaplotypeCallerGenotypingEngine - location ordered_PKNH_07_v2:1438572: too many alternative alleles found (6) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TACACACACACACAC, TACACACACACAC, TACATACATACACACACACACACAC. 
+INFO  11:41:04,872 ProgressMeter - ordered_PKNH_07_v2:1470869        5725911.0    53.5 m            9.3 m       29.6%     3.0 h       2.1 h 
+INFO  11:41:44,873 ProgressMeter - ordered_PKNH_08_v2:74030        7247987.0    54.2 m            7.5 m       30.1%     3.0 h       2.1 h 
+INFO  11:42:14,874 ProgressMeter - ordered_PKNH_08_v2:158646        7247987.0    54.7 m            7.5 m       30.5%     3.0 h       2.1 h 
+WARN  11:42:16,152 HaplotypeCallerGenotypingEngine - location ordered_PKNH_08_v2:159317: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TAAAAAA. 
+INFO  11:42:44,875 ProgressMeter - ordered_PKNH_08_v2:220672        7247987.0    55.2 m            7.6 m       30.7%     3.0 h       2.1 h 
+INFO  11:43:14,876 ProgressMeter - ordered_PKNH_08_v2:283742        7247987.0    55.7 m            7.7 m       31.0%     3.0 h       2.1 h 
+INFO  11:43:54,877 ProgressMeter - ordered_PKNH_08_v2:401919        7247987.0    56.3 m            7.8 m       31.5%     3.0 h       2.0 h 
+INFO  11:44:24,998 ProgressMeter - ordered_PKNH_08_v2:473158        7247987.0    56.8 m            7.8 m       31.7%     3.0 h       2.0 h 
+INFO  11:44:54,999 ProgressMeter - ordered_PKNH_08_v2:550027        7247987.0    57.3 m            7.9 m       32.1%     3.0 h       2.0 h 
+INFO  11:45:35,000 ProgressMeter - ordered_PKNH_08_v2:654652        7247987.0    58.0 m            8.0 m       32.5%     3.0 h       2.0 h 
+WARN  11:46:01,992 HaplotypeCallerGenotypingEngine - location ordered_PKNH_08_v2:716932-716936: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: A. 
+INFO  11:46:05,001 ProgressMeter - ordered_PKNH_08_v2:721865        7247987.0    58.5 m            8.1 m       32.8%     3.0 h     120.0 m 
+INFO  11:46:35,029 ProgressMeter - ordered_PKNH_08_v2:771955        7247987.0    59.0 m            8.1 m       33.0%     3.0 h     119.9 m 
+WARN  11:47:03,434 HaplotypeCallerGenotypingEngine - location ordered_PKNH_08_v2:848682: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTTTT. 
+INFO  11:47:05,035 ProgressMeter - ordered_PKNH_08_v2:853338        7247987.0    59.5 m            8.2 m       33.3%     3.0 h     119.1 m 
+WARN  11:47:24,146 HaplotypeCallerGenotypingEngine - location ordered_PKNH_08_v2:895807-895811: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: G. 
+INFO  11:47:35,036 ProgressMeter - ordered_PKNH_08_v2:915192        7247987.0    60.0 m            8.3 m       33.6%     3.0 h     118.8 m 
+INFO  11:48:05,037 ProgressMeter - ordered_PKNH_08_v2:962563        7247987.0    60.5 m            8.3 m       33.8%     3.0 h     118.7 m 
+INFO  11:48:35,039 ProgressMeter - ordered_PKNH_08_v2:1049850        7247987.0    61.0 m            8.4 m       34.1%     3.0 h     117.8 m 
+INFO  11:49:05,041 ProgressMeter - ordered_PKNH_08_v2:1120353        7247987.0    61.5 m            8.5 m       34.4%     3.0 h     117.2 m 
+INFO  11:49:35,043 ProgressMeter - ordered_PKNH_08_v2:1170644        7247987.0    62.0 m            8.6 m       34.6%     3.0 h     117.1 m 
+WARN  11:49:55,982 HaplotypeCallerGenotypingEngine - location ordered_PKNH_08_v2:1220052: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAA. 
+INFO  11:50:05,044 ProgressMeter - ordered_PKNH_08_v2:1242366        7247987.0    62.5 m            8.6 m       34.9%     3.0 h     116.5 m 
+INFO  11:50:35,045 ProgressMeter - ordered_PKNH_08_v2:1318888        7247987.0    63.0 m            8.7 m       35.2%     3.0 h     115.9 m 
+INFO  11:51:05,101 ProgressMeter - ordered_PKNH_08_v2:1378385        7247987.0    63.5 m            8.8 m       35.5%     3.0 h     115.6 m 
+INFO  11:51:35,102 ProgressMeter - ordered_PKNH_08_v2:1476416        7247987.0    64.0 m            8.8 m       35.9%     3.0 h     114.4 m 
+INFO  11:52:05,103 ProgressMeter - ordered_PKNH_08_v2:1523788        7247987.0    64.5 m            8.9 m       36.1%     3.0 h     114.4 m 
+INFO  11:52:35,104 ProgressMeter - ordered_PKNH_08_v2:1557521        7247987.0    65.0 m            9.0 m       36.2%     3.0 h     114.6 m 
+INFO  11:53:05,105 ProgressMeter - ordered_PKNH_08_v2:1597335        7247987.0    65.5 m            9.0 m       36.4%     3.0 h     114.6 m 
+INFO  11:53:35,106 ProgressMeter - ordered_PKNH_08_v2:1652773        7247987.0    66.0 m            9.1 m       36.6%     3.0 h     114.4 m 
+INFO  11:54:05,107 ProgressMeter - ordered_PKNH_08_v2:1703862        7247987.0    66.5 m            9.2 m       36.8%     3.0 h     114.2 m 
+WARN  11:54:12,367 HaplotypeCallerGenotypingEngine - location ordered_PKNH_08_v2:1741013: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: T. 
+INFO  11:54:35,181 ProgressMeter - ordered_PKNH_08_v2:1799247        7247987.0    67.0 m            9.2 m       37.2%     3.0 h     113.1 m 
+WARN  11:54:56,612 HaplotypeCallerGenotypingEngine - location ordered_PKNH_08_v2:1837298-1837307: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: G. 
+INFO  11:55:05,182 ProgressMeter - ordered_PKNH_08_v2:1850748        7247987.0    67.5 m            9.3 m       37.4%     3.0 h     113.0 m 
+INFO  11:55:35,183 ProgressMeter - ordered_PKNH_09_v2:68708        9172442.0    68.0 m            7.4 m       38.0%     3.0 h     111.0 m 
+INFO  11:56:15,184 ProgressMeter - ordered_PKNH_09_v2:164383        9172442.0    68.7 m            7.5 m       38.4%     3.0 h     110.2 m 
+WARN  11:56:25,680 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:189177-189185: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: C. 
+INFO  11:56:45,185 ProgressMeter - ordered_PKNH_09_v2:225618        9172442.0    69.2 m            7.5 m       38.6%     3.0 h     109.9 m 
+INFO  11:57:15,186 ProgressMeter - ordered_PKNH_09_v2:292389        9172442.0    69.7 m            7.6 m       38.9%     3.0 h     109.4 m 
+WARN  11:57:21,735 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:301360-301365: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAA. 
+INFO  11:57:45,188 ProgressMeter - ordered_PKNH_09_v2:344459        9172442.0    70.2 m            7.7 m       39.1%     3.0 h     109.2 m 
+INFO  11:58:15,189 ProgressMeter - ordered_PKNH_09_v2:441818        9172442.0    70.7 m            7.7 m       39.5%     3.0 h     108.1 m 
+INFO  11:58:45,190 ProgressMeter - ordered_PKNH_09_v2:517232        9172442.0    71.2 m            7.8 m       39.8%     3.0 h     107.5 m 
+WARN  11:59:04,152 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:553551: too many alternative alleles found (5) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: C, TC. 
+INFO  11:59:15,191 ProgressMeter - ordered_PKNH_09_v2:575309        9172442.0    71.7 m            7.8 m       40.1%     3.0 h     107.2 m 
+WARN  11:59:26,785 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:592574: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: AAAG. 
+WARN  11:59:38,042 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:642894-642896: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATTTTT. 
+INFO  11:59:45,192 ProgressMeter - ordered_PKNH_09_v2:659474        9172442.0    72.2 m            7.9 m       40.4%     3.0 h     106.4 m 
+INFO  12:00:15,193 ProgressMeter - ordered_PKNH_09_v2:716552        9172442.0    72.7 m            7.9 m       40.7%     3.0 h     106.1 m 
+WARN  12:00:34,749 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:752294-752304: too many alternative alleles found (7) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: G, GA, GAAAAAAAA, GAA. 
+INFO  12:00:45,194 ProgressMeter - ordered_PKNH_09_v2:775269        9172442.0    73.2 m            8.0 m       40.9%     3.0 h     105.7 m 
+INFO  12:01:15,276 ProgressMeter - ordered_PKNH_09_v2:841431        9172442.0    73.7 m            8.0 m       41.2%     3.0 h     105.3 m 
+WARN  12:01:23,073 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:886789: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTT. 
+INFO  12:01:55,277 ProgressMeter - ordered_PKNH_09_v2:970105        9172442.0    74.4 m            8.1 m       41.7%     3.0 h     103.9 m 
+INFO  12:02:25,278 ProgressMeter - ordered_PKNH_09_v2:1033458        9172442.0    74.9 m            8.2 m       42.0%     3.0 h     103.5 m 
+WARN  12:02:32,926 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:1047310: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GTGGTTGAGGAGGTGCATGTAGTGGATGAGAAAGTCGATGTAGTGGATGAGAAAGTCGATATAGTGGATGAGAAAGTCGATGTAGTGGATGAGAAAGTCGATGTAA. 
+INFO  12:02:55,279 ProgressMeter - ordered_PKNH_09_v2:1092775        9172442.0    75.4 m            8.2 m       42.2%     3.0 h     103.2 m 
+INFO  12:03:25,285 ProgressMeter - ordered_PKNH_09_v2:1142364        9172442.0    75.9 m            8.3 m       42.4%     3.0 h     103.0 m 
+INFO  12:03:55,305 ProgressMeter - ordered_PKNH_09_v2:1185592        9172442.0    76.4 m            8.3 m       42.6%     3.0 h     102.9 m 
+WARN  12:04:24,138 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:1241258-1241262: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAA. 
+INFO  12:04:25,313 ProgressMeter - ordered_PKNH_09_v2:1243604        9172442.0    76.9 m            8.4 m       42.8%     3.0 h     102.6 m 
+INFO  12:04:55,314 ProgressMeter - ordered_PKNH_09_v2:1311882        9172442.0    77.4 m            8.4 m       43.1%     3.0 h     102.1 m 
+INFO  12:05:25,316 ProgressMeter - ordered_PKNH_09_v2:1390446        9172442.0    77.9 m            8.5 m       43.4%     3.0 h     101.4 m 
+INFO  12:06:05,349 ProgressMeter - ordered_PKNH_09_v2:1509119        9172442.0    78.5 m            8.6 m       43.9%     3.0 h     100.3 m 
+INFO  12:06:35,350 ProgressMeter - ordered_PKNH_09_v2:1554033        9172442.0    79.0 m            8.6 m       44.1%     3.0 h     100.1 m 
+INFO  12:07:05,359 ProgressMeter - ordered_PKNH_09_v2:1619867        9172442.0    79.5 m            8.7 m       44.4%     3.0 h      99.7 m 
+INFO  12:07:35,378 ProgressMeter - ordered_PKNH_09_v2:1695164        9172442.0    80.0 m            8.7 m       44.7%     3.0 h      99.1 m 
+INFO  12:08:05,390 ProgressMeter - ordered_PKNH_09_v2:1762994        9172442.0    80.5 m            8.8 m       45.0%     3.0 h      98.6 m 
+INFO  12:08:35,397 ProgressMeter - ordered_PKNH_09_v2:1839999        9172442.0    81.0 m            8.8 m       45.3%     3.0 h      97.9 m 
+INFO  12:09:05,406 ProgressMeter - ordered_PKNH_09_v2:1925932        9172442.0    81.5 m            8.9 m       45.6%     3.0 h      97.1 m 
+WARN  12:09:30,434 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:1985339: too many alternative alleles found (7) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTGTGTGTGTG, CTGTGTGTG, CTGTGTGTGTGTGTG, CTGTGTG. 
+INFO  12:09:35,501 ProgressMeter - ordered_PKNH_09_v2:1998895        9172442.0    82.0 m            8.9 m       45.9%     3.0 h      96.5 m 
+WARN  12:09:53,255 HaplotypeCallerGenotypingEngine - location ordered_PKNH_09_v2:2053948: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TTTTTTTTA. 
+INFO  12:10:05,505 ProgressMeter - ordered_PKNH_09_v2:2117865        9172442.0    82.5 m            9.0 m       46.4%     3.0 h      95.2 m 
+INFO  12:10:35,505 ProgressMeter - ordered_PKNH_10_v2:64916      1.1367931E7    83.0 m            7.3 m       47.0%     2.9 h      93.6 m 
+INFO  12:11:05,506 ProgressMeter - ordered_PKNH_10_v2:165569      1.1367931E7    83.5 m            7.3 m       47.4%     2.9 h      92.6 m 
+WARN  12:11:32,573 HaplotypeCallerGenotypingEngine - location ordered_PKNH_10_v2:253028-253033: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TAAA. 
+INFO  12:11:35,507 ProgressMeter - ordered_PKNH_10_v2:263337      1.1367931E7    84.0 m            7.4 m       47.8%     2.9 h      91.7 m 
+INFO  12:12:05,508 ProgressMeter - ordered_PKNH_10_v2:339202      1.1367931E7    84.5 m            7.4 m       48.1%     2.9 h      91.1 m 
+INFO  12:12:45,509 ProgressMeter - ordered_PKNH_10_v2:446490      1.1367931E7    85.2 m            7.5 m       48.6%     2.9 h      90.2 m 
+INFO  12:13:15,510 ProgressMeter - ordered_PKNH_10_v2:531444      1.1367931E7    85.7 m            7.5 m       48.9%     2.9 h      89.4 m 
+INFO  12:13:45,515 ProgressMeter - ordered_PKNH_10_v2:585553      1.1367931E7    86.2 m            7.6 m       49.1%     2.9 h      89.2 m 
+INFO  12:14:15,516 ProgressMeter - ordered_PKNH_10_v2:655812      1.1367931E7    86.7 m            7.6 m       49.4%     2.9 h      88.7 m 
+INFO  12:14:45,517 ProgressMeter - ordered_PKNH_10_v2:729339      1.1367931E7    87.2 m            7.7 m       49.7%     2.9 h      88.1 m 
+INFO  12:15:15,553 ProgressMeter - ordered_PKNH_10_v2:787044      1.1367931E7    87.7 m            7.7 m       50.0%     2.9 h      87.8 m 
+WARN  12:15:29,755 HaplotypeCallerGenotypingEngine - location ordered_PKNH_10_v2:815718-815724: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTT. 
+INFO  12:15:45,554 ProgressMeter - ordered_PKNH_10_v2:848252      1.1367931E7    88.2 m            7.8 m       50.2%     2.9 h      87.4 m 
+INFO  12:16:15,555 ProgressMeter - ordered_PKNH_10_v2:891503      1.1367931E7    88.7 m            7.8 m       50.4%     2.9 h      87.2 m 
+INFO  12:16:45,556 ProgressMeter - ordered_PKNH_10_v2:939618      1.1367931E7    89.2 m            7.8 m       50.6%     2.9 h      87.0 m 
+INFO  12:17:15,558 ProgressMeter - ordered_PKNH_10_v2:1010721      1.1367931E7    89.7 m            7.9 m       50.9%     2.9 h      86.5 m 
+INFO  12:17:45,558 ProgressMeter - ordered_PKNH_10_v2:1083803      1.1367931E7    90.2 m            7.9 m       51.2%     2.9 h      86.0 m 
+INFO  12:18:15,559 ProgressMeter - ordered_PKNH_10_v2:1136710      1.1367931E7    90.7 m            8.0 m       51.4%     2.9 h      85.7 m 
+INFO  12:18:45,560 ProgressMeter - ordered_PKNH_10_v2:1178046      1.1367931E7    91.2 m            8.0 m       51.6%     2.9 h      85.6 m 
+INFO  12:19:15,562 ProgressMeter - ordered_PKNH_10_v2:1230488      1.1367931E7    91.7 m            8.1 m       51.8%     2.9 h      85.3 m 
+WARN  12:19:19,368 HaplotypeCallerGenotypingEngine - location ordered_PKNH_10_v2:1235668-1235672: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAA. 
+INFO  12:19:45,563 ProgressMeter - ordered_PKNH_10_v2:1292871      1.1367931E7    92.2 m            8.1 m       52.1%     3.0 h      84.9 m 
+INFO  12:20:15,564 ProgressMeter - ordered_PKNH_10_v2:1353220      1.1367931E7    92.7 m            8.2 m       52.3%     3.0 h      84.5 m 
+INFO  12:20:45,565 ProgressMeter - ordered_PKNH_10_v2:1426077      1.1367931E7    93.2 m            8.2 m       52.6%     3.0 h      84.0 m 
+INFO  12:21:15,567 ProgressMeter - ordered_PKNH_10_v2:1493442      1.1367931E7    93.7 m            8.2 m       52.9%     3.0 h      83.5 m 
+INFO  12:21:55,568 ProgressMeter - ordered_PKNH_11_v2:93088      1.2884913E7    94.4 m            7.3 m       53.4%     2.9 h      82.5 m 
+INFO  12:22:25,569 ProgressMeter - ordered_PKNH_11_v2:153519      1.2884913E7    94.9 m            7.4 m       53.6%     2.9 h      82.1 m 
+WARN  12:22:41,036 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:169782: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ACTGAACT. 
+WARN  12:22:41,047 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:169809-169811: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CGCGGCGGAA. 
+WARN  12:22:51,124 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:187056: too many alternative alleles found (5) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GTACTGCCAACACATCCAT, A. 
+INFO  12:22:55,571 ProgressMeter - ordered_PKNH_11_v2:200291      1.2884913E7    95.4 m            7.4 m       53.8%     3.0 h      81.9 m 
+INFO  12:23:25,571 ProgressMeter - ordered_PKNH_11_v2:274043      1.2884913E7    95.9 m            7.4 m       54.1%     3.0 h      81.3 m 
+INFO  12:23:55,572 ProgressMeter - ordered_PKNH_11_v2:357809      1.2884913E7    96.4 m            7.5 m       54.5%     2.9 h      80.6 m 
+INFO  12:24:25,574 ProgressMeter - ordered_PKNH_11_v2:442641      1.2884913E7    96.9 m            7.5 m       54.8%     2.9 h      79.9 m 
+INFO  12:24:55,576 ProgressMeter - ordered_PKNH_11_v2:518396      1.2884913E7    97.4 m            7.6 m       55.1%     2.9 h      79.3 m 
+INFO  12:25:25,587 ProgressMeter - ordered_PKNH_11_v2:610514      1.2884913E7    97.9 m            7.6 m       55.5%     2.9 h      78.5 m 
+INFO  12:25:55,603 ProgressMeter - ordered_PKNH_11_v2:686754      1.2884913E7    98.4 m            7.6 m       55.8%     2.9 h      77.9 m 
+INFO  12:26:25,604 ProgressMeter - ordered_PKNH_11_v2:755776      1.2884913E7    98.9 m            7.7 m       56.1%     2.9 h      77.4 m 
+INFO  12:26:55,605 ProgressMeter - ordered_PKNH_11_v2:849265      1.2884913E7    99.4 m            7.7 m       56.5%     2.9 h      76.6 m 
+INFO  12:27:25,606 ProgressMeter - ordered_PKNH_11_v2:932750      1.2884913E7    99.9 m            7.8 m       56.8%     2.9 h      75.9 m 
+INFO  12:27:55,607 ProgressMeter - ordered_PKNH_11_v2:1061631      1.2884913E7   100.4 m            7.8 m       57.3%     2.9 h      74.6 m 
+INFO  12:28:25,608 ProgressMeter - ordered_PKNH_11_v2:1149302      1.2884913E7   100.9 m            7.8 m       57.7%     2.9 h      73.9 m 
+WARN  12:28:31,791 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1167541: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTTT. 
+INFO  12:28:55,610 ProgressMeter - ordered_PKNH_11_v2:1237613      1.2884913E7   101.4 m            7.9 m       58.1%     2.9 h      73.2 m 
+WARN  12:28:59,151 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1244074: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAAAA. 
+INFO  12:29:25,615 ProgressMeter - ordered_PKNH_11_v2:1297280      1.2884913E7   101.9 m            7.9 m       58.3%     2.9 h      72.8 m 
+WARN  12:29:32,525 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1309359-1309363: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATTT. 
+INFO  12:29:55,616 ProgressMeter - ordered_PKNH_11_v2:1344042      1.2884913E7   102.4 m            7.9 m       58.5%     2.9 h      72.6 m 
+INFO  12:30:25,617 ProgressMeter - ordered_PKNH_11_v2:1421154      1.2884913E7   102.9 m            8.0 m       58.8%     2.9 h      72.0 m 
+WARN  12:30:26,538 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1421479: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: A. 
+WARN  12:30:46,401 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1460722: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAA. 
+INFO  12:30:55,618 ProgressMeter - ordered_PKNH_11_v2:1477976      1.2884913E7   103.4 m            8.0 m       59.1%     2.9 h      71.7 m 
+WARN  12:31:02,571 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1492330: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GA. 
+WARN  12:31:14,407 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1513463: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAAAAAAAA. 
+INFO  12:31:25,619 ProgressMeter - ordered_PKNH_11_v2:1530668      1.2884913E7   103.9 m            8.1 m       59.3%     2.9 h      71.4 m 
+INFO  12:32:05,620 ProgressMeter - ordered_PKNH_11_v2:1612972      1.2884913E7   104.5 m            8.1 m       59.6%     2.9 h      70.8 m 
+WARN  12:32:16,256 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1638405-1638413: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAA. 
+INFO  12:32:35,622 ProgressMeter - ordered_PKNH_11_v2:1663312      1.2884913E7   105.0 m            8.2 m       59.8%     2.9 h      70.5 m 
+WARN  12:32:58,897 HaplotypeCallerGenotypingEngine - location ordered_PKNH_11_v2:1695868: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TCC. 
+INFO  12:33:05,623 ProgressMeter - ordered_PKNH_11_v2:1706008      1.2884913E7   105.5 m            8.2 m       60.0%     2.9 h      70.4 m 
+INFO  12:33:45,624 ProgressMeter - ordered_PKNH_11_v2:1810627      1.2884913E7   106.2 m            8.2 m       60.4%     2.9 h      69.5 m 
+INFO  12:34:15,625 ProgressMeter - ordered_PKNH_11_v2:1909860      1.2884913E7   106.7 m            8.3 m       60.8%     2.9 h      68.7 m 
+INFO  12:34:45,626 ProgressMeter - ordered_PKNH_11_v2:1964226      1.2884913E7   107.2 m            8.3 m       61.1%     2.9 h      68.4 m 
+INFO  12:35:25,627 ProgressMeter - ordered_PKNH_11_v2:2037383      1.2884913E7   107.9 m            8.4 m       61.4%     2.9 h      67.9 m 
+INFO  12:35:55,628 ProgressMeter - ordered_PKNH_11_v2:2098365      1.2884913E7   108.4 m            8.4 m       61.6%     2.9 h      67.5 m 
+INFO  12:36:25,630 ProgressMeter - ordered_PKNH_11_v2:2174746      1.2884913E7   108.9 m            8.4 m       61.9%     2.9 h      66.9 m 
+INFO  12:36:55,630 ProgressMeter - ordered_PKNH_11_v2:2234879      1.2884913E7   109.4 m            8.5 m       62.2%     2.9 h      66.5 m 
+INFO  12:37:25,631 ProgressMeter - ordered_PKNH_11_v2:2308299      1.2884913E7   109.9 m            8.5 m       62.5%     2.9 h      66.0 m 
+INFO  12:37:55,641 ProgressMeter - ordered_PKNH_12_v2:99957       1.525358E7   110.4 m            7.2 m       63.1%     2.9 h      64.4 m 
+INFO  12:38:25,641 ProgressMeter - ordered_PKNH_12_v2:156087       1.525358E7   110.9 m            7.3 m       63.4%     2.9 h      64.1 m 
+INFO  12:38:55,642 ProgressMeter - ordered_PKNH_12_v2:200395       1.525358E7   111.4 m            7.3 m       63.5%     2.9 h      63.9 m 
+WARN  12:39:03,323 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:208299-208300: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: A. 
+INFO  12:39:35,703 ProgressMeter - ordered_PKNH_12_v2:259057       1.525358E7   112.0 m            7.3 m       63.8%     2.9 h      63.6 m 
+INFO  12:40:05,704 ProgressMeter - ordered_PKNH_12_v2:312182       1.525358E7   112.5 m            7.4 m       64.0%     2.9 h      63.3 m 
+INFO  12:40:45,705 ProgressMeter - ordered_PKNH_12_v2:394344       1.525358E7   113.2 m            7.4 m       64.3%     2.9 h      62.7 m 
+WARN  12:41:10,162 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:447856: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAA. 
+INFO  12:41:15,705 ProgressMeter - ordered_PKNH_12_v2:469750       1.525358E7   113.7 m            7.5 m       64.7%     2.9 h      62.2 m 
+INFO  12:41:45,707 ProgressMeter - ordered_PKNH_12_v2:534724       1.525358E7   114.2 m            7.5 m       64.9%     2.9 h      61.7 m 
+INFO  12:42:15,708 ProgressMeter - ordered_PKNH_12_v2:612953       1.525358E7   114.7 m            7.5 m       65.2%     2.9 h      61.1 m 
+INFO  12:42:55,708 ProgressMeter - ordered_PKNH_12_v2:717941       1.525358E7   115.4 m            7.6 m       65.7%     2.9 h      60.3 m 
+INFO  12:43:25,813 ProgressMeter - ordered_PKNH_12_v2:805446       1.525358E7   115.9 m            7.6 m       66.0%     2.9 h      59.6 m 
+INFO  12:44:05,814 ProgressMeter - ordered_PKNH_12_v2:925599       1.525358E7   116.5 m            7.6 m       66.5%     2.9 h      58.6 m 
+INFO  12:44:35,815 ProgressMeter - ordered_PKNH_12_v2:1000214       1.525358E7   117.0 m            7.7 m       66.8%     2.9 h      58.1 m 
+INFO  12:45:05,816 ProgressMeter - ordered_PKNH_12_v2:1087860       1.525358E7   117.5 m            7.7 m       67.2%     2.9 h      57.4 m 
+WARN  12:45:28,342 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:1136703: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAA. 
+INFO  12:45:45,817 ProgressMeter - ordered_PKNH_12_v2:1173805       1.525358E7   118.2 m            7.7 m       67.5%     2.9 h      56.8 m 
+WARN  12:45:56,335 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:1196403: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GGATGGTGCAA. 
+WARN  12:45:56,341 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:1196444: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: T. 
+INFO  12:46:25,818 ProgressMeter - ordered_PKNH_12_v2:1275370       1.525358E7   118.9 m            7.8 m       68.0%     2.9 h      56.0 m 
+INFO  12:46:55,819 ProgressMeter - ordered_PKNH_12_v2:1357637       1.525358E7   119.4 m            7.8 m       68.3%     2.9 h      55.4 m 
+INFO  12:47:25,847 ProgressMeter - ordered_PKNH_12_v2:1435621       1.525358E7   119.9 m            7.9 m       68.6%     2.9 h      54.8 m 
+INFO  12:48:05,847 ProgressMeter - ordered_PKNH_12_v2:1525770       1.525358E7     2.0 h            7.9 m       69.0%     2.9 h      54.2 m 
+WARN  12:48:25,562 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:1562544: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAA. 
+INFO  12:48:35,848 ProgressMeter - ordered_PKNH_12_v2:1590155       1.525358E7     2.0 h            7.9 m       69.3%     2.9 h      53.7 m 
+INFO  12:49:05,945 ProgressMeter - ordered_PKNH_12_v2:1665372       1.525358E7     2.0 h            8.0 m       69.6%     2.9 h      53.2 m 
+INFO  12:49:35,990 ProgressMeter - ordered_PKNH_12_v2:1758145       1.525358E7     2.0 h            8.0 m       69.9%     2.9 h      52.4 m 
+INFO  12:50:05,991 ProgressMeter - ordered_PKNH_12_v2:1814976       1.525358E7     2.0 h            8.0 m       70.2%     2.9 h      52.1 m 
+INFO  12:50:35,993 ProgressMeter - ordered_PKNH_12_v2:1892769       1.525358E7     2.1 h            8.1 m       70.5%     2.9 h      51.5 m 
+INFO  12:51:05,994 ProgressMeter - ordered_PKNH_12_v2:1975965       1.525358E7     2.1 h            8.1 m       70.8%     2.9 h      50.8 m 
+INFO  12:51:35,997 ProgressMeter - ordered_PKNH_12_v2:2060561       1.525358E7     2.1 h            8.1 m       71.2%     2.9 h      50.2 m 
+WARN  12:51:52,688 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:2113897: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTCTGA. 
+INFO  12:52:05,998 ProgressMeter - ordered_PKNH_12_v2:2154035       1.525358E7     2.1 h            8.2 m       71.6%     2.9 h      49.4 m 
+WARN  12:52:22,821 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:2206461: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TCC. 
+INFO  12:52:35,999 ProgressMeter - ordered_PKNH_12_v2:2241494       1.525358E7     2.1 h            8.2 m       71.9%     2.9 h      48.8 m 
+INFO  12:53:16,000 ProgressMeter - ordered_PKNH_12_v2:2328898       1.525358E7     2.1 h            8.2 m       72.3%     2.9 h      48.2 m 
+INFO  12:53:46,002 ProgressMeter - ordered_PKNH_12_v2:2410959       1.525358E7     2.1 h            8.3 m       72.6%     2.9 h      47.5 m 
+INFO  12:54:16,011 ProgressMeter - ordered_PKNH_12_v2:2489136       1.525358E7     2.1 h            8.3 m       73.0%     2.9 h      47.0 m 
+INFO  12:54:46,022 ProgressMeter - ordered_PKNH_12_v2:2558513       1.525358E7     2.1 h            8.3 m       73.2%     2.9 h      46.5 m 
+INFO  12:55:16,023 ProgressMeter - ordered_PKNH_12_v2:2631595       1.525358E7     2.1 h            8.4 m       73.5%     2.9 h      45.9 m 
+INFO  12:55:46,024 ProgressMeter - ordered_PKNH_12_v2:2707560       1.525358E7     2.1 h            8.4 m       73.9%     2.9 h      45.4 m 
+INFO  12:56:16,025 ProgressMeter - ordered_PKNH_12_v2:2782704       1.525358E7     2.1 h            8.4 m       74.2%     2.9 h      44.8 m 
+WARN  12:56:23,059 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:2799764: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CAAAAA. 
+INFO  12:56:46,026 ProgressMeter - ordered_PKNH_12_v2:2843620       1.525358E7     2.2 h            8.5 m       74.4%     2.9 h      44.4 m 
+WARN  12:56:51,423 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:2861140-2861145: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTTT. 
+INFO  12:57:16,027 ProgressMeter - ordered_PKNH_12_v2:2925732       1.525358E7     2.2 h            8.5 m       74.7%     2.9 h      43.8 m 
+INFO  12:57:46,028 ProgressMeter - ordered_PKNH_12_v2:2994173       1.525358E7     2.2 h            8.5 m       75.0%     2.9 h      43.3 m 
+INFO  12:58:16,030 ProgressMeter - ordered_PKNH_12_v2:3059811       1.525358E7     2.2 h            8.6 m       75.3%     2.9 h      42.9 m 
+WARN  12:58:19,231 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:3060761: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GA. 
+WARN  12:58:19,233 HaplotypeCallerGenotypingEngine - location ordered_PKNH_12_v2:3060762: too many alternative alleles found (5) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAA, GAA. 
+INFO  12:58:46,104 ProgressMeter - ordered_PKNH_12_v2:3121644       1.525358E7     2.2 h            8.6 m       75.6%     2.9 h      42.4 m 
+INFO  12:59:16,105 ProgressMeter - ordered_PKNH_13_v2:98444      1.8415289E7     2.2 h            7.2 m       76.1%     2.9 h      41.3 m 
+INFO  12:59:46,106 ProgressMeter - ordered_PKNH_13_v2:180295      1.8415289E7     2.2 h            7.2 m       76.5%     2.9 h      40.7 m 
+INFO  13:00:16,141 ProgressMeter - ordered_PKNH_13_v2:239902      1.8415289E7     2.2 h            7.2 m       76.7%     2.9 h      40.3 m 
+WARN  13:00:19,365 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:249759-249762: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTTTT. 
+INFO  13:00:46,142 ProgressMeter - ordered_PKNH_13_v2:327307      1.8415289E7     2.2 h            7.2 m       77.1%     2.9 h      39.6 m 
+INFO  13:01:26,143 ProgressMeter - ordered_PKNH_13_v2:425373      1.8415289E7     2.2 h            7.3 m       77.5%     2.9 h      38.9 m 
+INFO  13:01:56,144 ProgressMeter - ordered_PKNH_13_v2:492290      1.8415289E7     2.2 h            7.3 m       77.7%     2.9 h      38.5 m 
+WARN  13:02:04,923 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:517999-518008: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATTT. 
+WARN  13:02:07,348 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:519782: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAA. 
+INFO  13:02:26,145 ProgressMeter - ordered_PKNH_13_v2:566514      1.8415289E7     2.2 h            7.3 m       78.0%     2.9 h      37.9 m 
+WARN  13:02:53,485 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:643342: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAA. 
+INFO  13:03:06,146 ProgressMeter - ordered_PKNH_13_v2:666868      1.8415289E7     2.3 h            7.4 m       78.5%     2.9 h      37.2 m 
+INFO  13:03:36,181 ProgressMeter - ordered_PKNH_13_v2:713615      1.8415289E7     2.3 h            7.4 m       78.7%     2.9 h      36.9 m 
+INFO  13:04:06,182 ProgressMeter - ordered_PKNH_13_v2:766350      1.8415289E7     2.3 h            7.4 m       78.9%     2.9 h      36.6 m 
+INFO  13:04:36,183 ProgressMeter - ordered_PKNH_13_v2:840811      1.8415289E7     2.3 h            7.4 m       79.2%     2.9 h      36.0 m 
+INFO  13:05:06,209 ProgressMeter - ordered_PKNH_13_v2:935744      1.8415289E7     2.3 h            7.5 m       79.6%     2.9 h      35.3 m 
+INFO  13:05:36,210 ProgressMeter - ordered_PKNH_13_v2:1003613      1.8415289E7     2.3 h            7.5 m       79.8%     2.9 h      34.8 m 
+WARN  13:05:52,081 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:1030218: too many alternative alleles found (5) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: AAAGCCATCAAAGTGTTGTCGTCGAATAGTAGATC, ATTCCCTGTAAAAGTGTCGTCAAAGTGTTGATGTCGAACAGTAGATCTTCTTCCC. 
+WARN  13:05:52,083 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:1030221: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATCAAAGTGTTGTCGTCGAATAGTAGATCAAG. 
+INFO  13:06:06,212 ProgressMeter - ordered_PKNH_13_v2:1064270      1.8415289E7     2.3 h            7.5 m       80.1%     2.9 h      34.4 m 
+INFO  13:06:36,219 ProgressMeter - ordered_PKNH_13_v2:1207592      1.8415289E7     2.3 h            7.6 m       80.7%     2.9 h      33.3 m 
+INFO  13:07:06,220 ProgressMeter - ordered_PKNH_13_v2:1294647      1.8415289E7     2.3 h            7.6 m       81.0%     2.9 h      32.6 m 
+INFO  13:07:36,221 ProgressMeter - ordered_PKNH_13_v2:1359632      1.8415289E7     2.3 h            7.6 m       81.3%     2.9 h      32.2 m 
+INFO  13:08:06,222 ProgressMeter - ordered_PKNH_13_v2:1419889      1.8415289E7     2.3 h            7.6 m       81.6%     2.9 h      31.8 m 
+INFO  13:08:36,223 ProgressMeter - ordered_PKNH_13_v2:1509669      1.8415289E7     2.4 h            7.7 m       81.9%     2.9 h      31.1 m 
+WARN  13:08:44,468 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:1532448: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: AAAAGGAGTGTTGAAAGGAGTGTTGAAAGGAGTGTTGAAAGGAGTGTTGAAAGGAGTGTTG. 
+WARN  13:08:56,577 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:1564810: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATTTTT. 
+INFO  13:09:06,224 ProgressMeter - ordered_PKNH_13_v2:1582152      1.8415289E7     2.4 h            7.7 m       82.2%     2.9 h      30.6 m 
+WARN  13:09:14,850 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:1594001-1594005: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: G. 
+INFO  13:09:36,225 ProgressMeter - ordered_PKNH_13_v2:1647184      1.8415289E7     2.4 h            7.7 m       82.5%     2.9 h      30.1 m 
+INFO  13:10:06,226 ProgressMeter - ordered_PKNH_13_v2:1717372      1.8415289E7     2.4 h            7.7 m       82.8%     2.9 h      29.6 m 
+WARN  13:10:27,557 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:1780236: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TAAAA. 
+INFO  13:10:36,227 ProgressMeter - ordered_PKNH_13_v2:1809237      1.8415289E7     2.4 h            7.8 m       83.2%     2.9 h      29.0 m 
+INFO  13:11:06,265 ProgressMeter - ordered_PKNH_13_v2:1882202      1.8415289E7     2.4 h            7.8 m       83.5%     2.9 h      28.4 m 
+INFO  13:11:36,266 ProgressMeter - ordered_PKNH_13_v2:1947375      1.8415289E7     2.4 h            7.8 m       83.7%     2.9 h      28.0 m 
+WARN  13:11:37,407 HaplotypeCallerGenotypingEngine - location ordered_PKNH_13_v2:1947288: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATT. 
+INFO  13:12:06,268 ProgressMeter - ordered_PKNH_13_v2:2037438      1.8415289E7     2.4 h            7.8 m       84.1%     2.9 h      27.3 m 
+INFO  13:12:36,269 ProgressMeter - ordered_PKNH_13_v2:2115309      1.8415289E7     2.4 h            7.9 m       84.4%     2.9 h      26.8 m 
+INFO  13:13:16,270 ProgressMeter - ordered_PKNH_13_v2:2216476      1.8415289E7     2.4 h            7.9 m       84.8%     2.9 h      26.0 m 
+INFO  13:13:46,271 ProgressMeter - ordered_PKNH_13_v2:2289589      1.8415289E7     2.4 h            7.9 m       85.1%     2.9 h      25.5 m 
+INFO  13:14:16,296 ProgressMeter - ordered_PKNH_13_v2:2372852      1.8415289E7     2.4 h            8.0 m       85.5%     2.9 h      24.9 m 
+INFO  13:14:46,355 ProgressMeter - ordered_PKNH_13_v2:2433679      1.8415289E7     2.5 h            8.0 m       85.7%     2.9 h      24.5 m 
+INFO  13:15:16,356 ProgressMeter - ordered_PKNH_13_v2:2491374      1.8415289E7     2.5 h            8.0 m       86.0%     2.9 h      24.1 m 
+INFO  13:15:46,383 ProgressMeter - ordered_PKNH_14_v2:18226        2.10123E7     2.5 h            7.1 m       86.5%     2.9 h      23.2 m 
+INFO  13:16:26,383 ProgressMeter - ordered_PKNH_14_v2:181912        2.10123E7     2.5 h            7.1 m       87.1%     2.8 h      22.0 m 
+INFO  13:16:56,384 ProgressMeter - ordered_PKNH_14_v2:263301        2.10123E7     2.5 h            7.1 m       87.5%     2.8 h      21.4 m 
+INFO  13:17:26,385 ProgressMeter - ordered_PKNH_14_v2:354885        2.10123E7     2.5 h            7.1 m       87.9%     2.8 h      20.7 m 
+WARN  13:17:53,535 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:448454-448458: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: C. 
+INFO  13:17:56,386 ProgressMeter - ordered_PKNH_14_v2:453738        2.10123E7     2.5 h            7.2 m       88.3%     2.8 h      20.0 m 
+INFO  13:18:26,387 ProgressMeter - ordered_PKNH_14_v2:553096        2.10123E7     2.5 h            7.2 m       88.7%     2.8 h      19.3 m 
+INFO  13:18:56,388 ProgressMeter - ordered_PKNH_14_v2:646112        2.10123E7     2.5 h            7.2 m       89.1%     2.8 h      18.6 m 
+INFO  13:19:26,390 ProgressMeter - ordered_PKNH_14_v2:723111        2.10123E7     2.5 h            7.2 m       89.4%     2.8 h      18.1 m 
+WARN  13:19:42,745 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:769673: too many alternative alleles found (5) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAA, GA. 
+INFO  13:19:56,391 ProgressMeter - ordered_PKNH_14_v2:799369        2.10123E7     2.5 h            7.3 m       89.7%     2.8 h      17.5 m 
+INFO  13:20:26,392 ProgressMeter - ordered_PKNH_14_v2:871663        2.10123E7     2.5 h            7.3 m       90.0%     2.8 h      17.0 m 
+INFO  13:20:56,393 ProgressMeter - ordered_PKNH_14_v2:968436        2.10123E7     2.6 h            7.3 m       90.4%     2.8 h      16.3 m 
+INFO  13:21:26,394 ProgressMeter - ordered_PKNH_14_v2:1053990        2.10123E7     2.6 h            7.3 m       90.7%     2.8 h      15.7 m 
+INFO  13:21:56,395 ProgressMeter - ordered_PKNH_14_v2:1143664        2.10123E7     2.6 h            7.3 m       91.1%     2.8 h      15.1 m 
+INFO  13:22:36,396 ProgressMeter - ordered_PKNH_14_v2:1265209        2.10123E7     2.6 h            7.4 m       91.6%     2.8 h      14.2 m 
+WARN  13:23:02,815 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:1334763: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTTT. 
+INFO  13:23:06,397 ProgressMeter - ordered_PKNH_14_v2:1352582        2.10123E7     2.6 h            7.4 m       92.0%     2.8 h      13.6 m 
+INFO  13:23:46,398 ProgressMeter - ordered_PKNH_14_v2:1480268        2.10123E7     2.6 h            7.4 m       92.5%     2.8 h      12.7 m 
+WARN  13:23:55,828 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:1507229: too many alternative alleles found (5) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAA, GAAAAAA. 
+INFO  13:24:16,475 ProgressMeter - ordered_PKNH_14_v2:1571061        2.10123E7     2.6 h            7.5 m       92.9%     2.8 h      12.1 m 
+WARN  13:24:40,637 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:1649141-1649143: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CTTTT. 
+INFO  13:24:46,476 ProgressMeter - ordered_PKNH_14_v2:1668654        2.10123E7     2.6 h            7.5 m       93.3%     2.8 h      11.4 m 
+INFO  13:25:26,539 ProgressMeter - ordered_PKNH_14_v2:1786735        2.10123E7     2.6 h            7.5 m       93.7%     2.8 h      10.5 m 
+INFO  13:25:56,541 ProgressMeter - ordered_PKNH_14_v2:1839216        2.10123E7     2.6 h            7.5 m       94.0%     2.8 h      10.2 m 
+WARN  13:26:17,037 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:1886344: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: GAAAAA. 
+INFO  13:26:26,543 ProgressMeter - ordered_PKNH_14_v2:1917138        2.10123E7     2.6 h            7.6 m       94.3%     2.8 h       9.6 m 
+INFO  13:26:56,543 ProgressMeter - ordered_PKNH_14_v2:1986270        2.10123E7     2.7 h            7.6 m       94.6%     2.8 h       9.2 m 
+INFO  13:27:26,545 ProgressMeter - ordered_PKNH_14_v2:2043457        2.10123E7     2.7 h            7.6 m       94.8%     2.8 h       8.8 m 
+WARN  13:27:46,039 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:2076392: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CCA. 
+INFO  13:27:56,574 ProgressMeter - ordered_PKNH_14_v2:2096925        2.10123E7     2.7 h            7.6 m       95.0%     2.8 h       8.4 m 
+INFO  13:28:26,586 ProgressMeter - ordered_PKNH_14_v2:2146706        2.10123E7     2.7 h            7.7 m       95.2%     2.8 h       8.1 m 
+INFO  13:28:56,588 ProgressMeter - ordered_PKNH_14_v2:2243931        2.10123E7     2.7 h            7.7 m       95.6%     2.8 h       7.4 m 
+INFO  13:29:26,589 ProgressMeter - ordered_PKNH_14_v2:2312576        2.10123E7     2.7 h            7.7 m       95.9%     2.8 h       6.9 m 
+INFO  13:29:56,591 ProgressMeter - ordered_PKNH_14_v2:2363700        2.10123E7     2.7 h            7.7 m       96.1%     2.8 h       6.6 m 
+WARN  13:30:08,662 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:2391624-2391630: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: C. 
+INFO  13:30:26,593 ProgressMeter - ordered_PKNH_14_v2:2448144        2.10123E7     2.7 h            7.8 m       96.5%     2.8 h       6.0 m 
+INFO  13:30:56,594 ProgressMeter - ordered_PKNH_14_v2:2513469        2.10123E7     2.7 h            7.8 m       96.7%     2.8 h       5.5 m 
+INFO  13:31:26,596 ProgressMeter - ordered_PKNH_14_v2:2564786        2.10123E7     2.7 h            7.8 m       96.9%     2.8 h       5.2 m 
+INFO  13:31:56,598 ProgressMeter - ordered_PKNH_14_v2:2620995        2.10123E7     2.7 h            7.8 m       97.2%     2.8 h       4.8 m 
+INFO  13:32:26,599 ProgressMeter - ordered_PKNH_14_v2:2720125        2.10123E7     2.7 h            7.8 m       97.6%     2.8 h       4.1 m 
+WARN  13:32:41,547 HaplotypeCallerGenotypingEngine - location ordered_PKNH_14_v2:2772741-2772745: too many alternative alleles found (5) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: T, TAAA. 
+INFO  13:32:56,600 ProgressMeter - ordered_PKNH_14_v2:2803944        2.10123E7     2.8 h            7.9 m       97.9%     2.8 h       3.5 m 
+INFO  13:33:26,601 ProgressMeter - ordered_PKNH_14_v2:2868030        2.10123E7     2.8 h            7.9 m       98.2%     2.8 h       3.1 m 
+INFO  13:33:56,602 ProgressMeter - ordered_PKNH_14_v2:2944683        2.10123E7     2.8 h            7.9 m       98.5%     2.8 h       2.5 m 
+INFO  13:34:26,603 ProgressMeter - ordered_PKNH_14_v2:3000282        2.10123E7     2.8 h            7.9 m       98.7%     2.8 h       2.1 m 
+INFO  13:35:06,604 ProgressMeter - ordered_PKNH_14_v2:3080580        2.10123E7     2.8 h            8.0 m       99.1%     2.8 h      94.0 s 
+INFO  13:35:36,605 ProgressMeter - ordered_PKNH_14_v2:3144783        2.10123E7     2.8 h            8.0 m       99.3%     2.8 h      68.0 s 
+INFO  13:36:06,606 ProgressMeter - ordered_PKNH_14_v2:3240915        2.10123E7     2.8 h            8.0 m       99.7%     2.8 h      28.0 s 
+INFO  13:36:14,907 VectorLoglessPairHMM - Time spent in setup for JNI call : 4.786769722000001 
+INFO  13:36:14,907 PairHMM - Total compute time in PairHMM computeLikelihoods() : 3280.376914673 
+INFO  13:36:14,908 HaplotypeCaller - Ran local assembly on 192650 active regions 
+INFO  13:36:15,078 ProgressMeter -            done      2.4320447E7     2.8 h            6.9 m      100.0%     2.8 h       0.0 s 
+INFO  13:36:15,079 ProgressMeter - Total runtime 10121.03 secs, 168.68 min, 2.81 hours 
+INFO  13:36:15,080 MicroScheduler - 13854818 reads were filtered out during the traversal out of approximately 24980704 total reads (55.46%) 
+INFO  13:36:15,080 MicroScheduler -   -> 0 reads (0.00% of total) failing BadCigarFilter 
+INFO  13:36:15,081 MicroScheduler -   -> 5682737 reads (22.75% of total) failing DuplicateReadFilter 
+INFO  13:36:15,082 MicroScheduler -   -> 0 reads (0.00% of total) failing FailsVendorQualityCheckFilter 
+INFO  13:36:15,083 MicroScheduler -   -> 7612553 reads (30.47% of total) failing HCMappingQualityFilter 
+INFO  13:36:15,083 MicroScheduler -   -> 0 reads (0.00% of total) failing MalformedReadFilter 
+INFO  13:36:15,084 MicroScheduler -   -> 0 reads (0.00% of total) failing MappingQualityUnavailableFilter 
+INFO  13:36:15,085 MicroScheduler -   -> 559528 reads (2.24% of total) failing NotPrimaryAlignmentFilter 
+INFO  13:36:15,085 MicroScheduler -   -> 0 reads (0.00% of total) failing UnmappedReadFilter 
+------------------------------------------------------------------------------------------
+Done. There were 95 WARN messages, the first 10 are repeated below.
+WARN  10:47:33,660 GATKVCFUtils - Naming your output file using the .g.vcf extension will automatically set the appropriate values  for --variant_index_type and --variant_index_parameter 
+WARN  10:47:33,661 GATKVCFUtils - Creating Tabix index for /g/data/pq84/malaria/outputs/04_Variant_calling/haplotype_call/PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.g.vcf.gz, ignoring user-specified index type and parameter 
+WARN  10:47:34,077 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+WARN  10:47:34,644 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not HaplotypeCaller 
+WARN  10:47:35,719 AnnotationUtils - Annotation will not be calculated, genotype is not called 
+WARN  10:49:36,780 HaplotypeCallerGenotypingEngine - location ordered_PKNH_01_v2:318949-318950: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: C. 
+WARN  10:51:53,891 HaplotypeCallerGenotypingEngine - location ordered_PKNH_01_v2:526345-526351: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: ATTT. 
+WARN  10:53:00,826 HaplotypeCallerGenotypingEngine - location ordered_PKNH_01_v2:672323: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: TCGTGTTGAA. 
+WARN  10:54:26,833 HaplotypeCallerGenotypingEngine - location ordered_PKNH_01_v2:825687: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: CCACA. 
+WARN  10:55:07,716 HaplotypeCallerGenotypingEngine - location ordered_PKNH_02_v2:66893: too many alternative alleles found (4) larger than the maximum requested with -maxAltAlleles (3), the following will be dropped: A. 
+------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+FINISHED
+---------------------------------------------------------------------------------------------------------------------
+
+======================================================================================
+                  Resource Usage on 2022-02-10 14:36:17:
+   Job Id:             35011724.gadi-pbs
+   Project:            pq84
+   Exit Status:        0
+   Service Units:      70.31
+   NCPUs Requested:    10                     NCPUs Used: 10              
+                                           CPU Time Used: 03:48:40                                   
+   Memory Requested:   50.0GB                Memory Used: 4.9GB           
+   Walltime requested: 12:00:00            Walltime Used: 02:48:44        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================

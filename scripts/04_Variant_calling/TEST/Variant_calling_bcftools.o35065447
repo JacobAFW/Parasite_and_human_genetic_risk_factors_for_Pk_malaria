@@ -1,0 +1,35 @@
+---------------------------------------
+PBS: Job identifier is 35065447.gadi-pbs
+PBS: Job name is Variant_calling_bcftools
+---------------------------------------
+Define paths and load modules
+Loading bcftools/1.12
+  Loading requirement: intel-mkl/2020.3.304 python3/3.9.2
+---------------------------------------
+---------------------------------------
+Change to working directory and set env variables
+---------------------------------------------------------------------------------------------------------------------
+create input bam file list
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+bcftools
+---------------------------------------------------------------------------------------------------------------------
+Note: none of --samples-file, --ploidy or --ploidy-file given, assuming all sites are diploid
+[mpileup] 4 samples in 4 input files
+[mpileup] maximum number of reads per input file set to -d 250
+index: failed to open bcftools_genotyped.vcf.gz
+---------------------------------------
+Finished 
+
+======================================================================================
+                  Resource Usage on 2022-02-11 11:15:12:
+   Job Id:             35065447.gadi-pbs
+   Project:            pq84
+   Exit Status:        0
+   Service Units:      30.57
+   NCPUs Requested:    21                     NCPUs Used: 21              
+                                           CPU Time Used: 00:39:13                                   
+   Memory Requested:   100.0GB               Memory Used: 11.32GB         
+   Walltime requested: 48:00:00            Walltime Used: 00:36:41        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================

@@ -1,0 +1,124 @@
+---------------------------------------
+PBS: Job identifier is 35031029.gadi-pbs
+PBS: Job name is Variant_calling_gatk
+---------------------------------------
+Define paths and load modules
+---------------------------------------
+---------------------------------------
+Change to working directory and set env variables
+---------------------------------------------------------------------------------------------------------------------
+Clean up VCF header
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+GATK
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Combine GVCFs
+INFO  16:40:01,367 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:40:01,368 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:40:01,368 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:40:01,369 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:40:01,369 HelpFormatter - [Thu Feb 10 16:40:01 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:40:01,369 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:40:01,371 HelpFormatter - Program Args: -T CombineGVCFs -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -V PK_SB_DNA_004_DKDL210002133-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.g.vcf.gz -V PK_SB_DNA_006_DKDL210002135-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.g.vcf.gz -V PK_SB_DNA_008_DKDL210002137-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.g.vcf.gz -V PK_SB_DNA_009_DKDL210002138-1a_HWHGKDSXY_L4.dupmarked.realigned.recal.g.vcf.gz -o /g/data/pq84/malaria/outputs/04_Variant_calling/gatk/GATK_combined.g.vcf.gz 
+INFO  16:40:01,378 HelpFormatter - Executing as jw1542@gadi-cpu-clx-2232.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:40:01,379 HelpFormatter - Date/Time: 2022/02/10 16:40:01 
+INFO  16:40:01,379 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:40:01,379 HelpFormatter - ------------------------------------------------------------------------------------------- 
+WARN  16:40:02,506 GATKVCFUtils - Creating Tabix index for /g/data/pq84/malaria/outputs/04_Variant_calling/gatk/GATK_combined.g.vcf.gz, ignoring user-specified index type and parameter 
+INFO  16:40:02,516 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:40:02,541 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:40:02,541 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:40:02,542 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:40:02,748 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+WARN  16:40:03,657 IndexDictionaryUtils - Track variant doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  16:40:03,657 IndexDictionaryUtils - Track variant2 doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  16:40:03,657 IndexDictionaryUtils - Track variant3 doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  16:40:03,657 IndexDictionaryUtils - Track variant4 doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  16:40:03,724 GenomeAnalysisEngine - Preparing for traversal 
+INFO  16:40:03,724 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:40:03,725 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:40:03,725 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:40:03,725 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  16:40:12,043 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  16:40:12,043 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+WARN  16:40:12,043 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  16:40:33,728 ProgressMeter - ordered_PKNH_03_v2:695601   1680216.0    30.0 s      17.0 s        9.8%     5.1 m       4.6 m 
+INFO  16:41:03,730 ProgressMeter - ordered_PKNH_07_v2:221201   5725911.0    60.0 s      10.0 s       24.5%     4.1 m       3.1 m 
+INFO  16:41:33,732 ProgressMeter - ordered_PKNH_09_v2:361801   9172442.0    90.0 s       9.0 s       39.2%     3.8 m       2.3 m 
+INFO  16:42:03,733 ProgressMeter - ordered_PKNH_11_v2:96101   1.2884913E7   120.0 s       9.0 s       53.4%     3.7 m     104.0 s 
+INFO  16:42:33,784 ProgressMeter - ordered_PKNH_12_v2:1266201   1.625358E7     2.5 m       9.0 s       67.9%     3.7 m      70.0 s 
+INFO  16:43:03,932 ProgressMeter - ordered_PKNH_13_v2:1586601   1.9415289E7     3.0 m       9.0 s       82.2%     3.6 m      38.0 s 
+INFO  16:43:33,934 ProgressMeter - ordered_PKNH_14_v2:2258801   2.30123E7     3.5 m       9.0 s       95.7%     3.7 m       9.0 s 
+INFO  16:43:42,330 ProgressMeter -            done   2.4320447E7     3.6 m       8.0 s      100.0%     3.6 m       0.0 s 
+INFO  16:43:42,330 ProgressMeter - Total runtime 218.61 secs, 3.64 min, 0.06 hours 
+------------------------------------------------------------------------------------------
+Done. There were 8 WARN messages, the first 8 are repeated below.
+WARN  16:40:02,506 GATKVCFUtils - Creating Tabix index for /g/data/pq84/malaria/outputs/04_Variant_calling/gatk/GATK_combined.g.vcf.gz, ignoring user-specified index type and parameter 
+WARN  16:40:03,657 IndexDictionaryUtils - Track variant doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  16:40:03,657 IndexDictionaryUtils - Track variant2 doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  16:40:03,657 IndexDictionaryUtils - Track variant3 doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  16:40:03,657 IndexDictionaryUtils - Track variant4 doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  16:40:12,043 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  16:40:12,043 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+WARN  16:40:12,043 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+Genotype GVCFs
+INFO  16:43:43,660 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:43:43,662 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:43:43,662 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:43:43,663 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:43:43,663 HelpFormatter - [Thu Feb 10 16:43:43 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:43:43,663 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:43:43,665 HelpFormatter - Program Args: -T GenotypeGVCFs -nt 20 -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -L /g/data/pq84/malaria/data/ref_genomes/PKA1H1/strain_A1_H.1.Icor.fasta.bed -V GATK_combined.g.vcf.gz -o GATK_genotyped.vcf.gz 
+INFO  16:43:43,669 HelpFormatter - Executing as jw1542@gadi-cpu-clx-2232.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:43:43,670 HelpFormatter - Date/Time: 2022/02/10 16:43:43 
+INFO  16:43:43,670 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:43:43,670 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:43:43,680 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:43:43,694 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:43:43,695 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:43:43,695 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:43:43,816 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  16:43:43,852 IntervalUtils - Processing 24320447 bp from intervals 
+WARN  16:43:43,852 IndexDictionaryUtils - Track variant doesn't have a sequence dictionary built in, skipping dictionary validation 
+INFO  16:43:43,857 MicroScheduler - Running the GATK in parallel mode with 20 total threads, 1 CPU thread(s) for each of 20 data thread(s), of 96 processors available on this machine 
+INFO  16:43:43,901 GenomeAnalysisEngine - Preparing for traversal 
+INFO  16:43:43,902 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:43:43,902 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:43:43,902 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:43:43,903 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  16:43:43,994 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  16:43:43,994 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+WARN  16:43:43,995 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+INFO  16:43:43,995 GenotypeGVCFs - Notice that the -ploidy parameter is ignored in GenotypeGVCFs tool as this is automatically determined by the input variant files 
+WARN  16:43:44,347 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  16:43:51,761 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at ordered_PKNH_05_v2: 177131 has 7 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+INFO  16:44:13,907 ProgressMeter - new_API_strain_A1_H.1:34401   2.2320447E7    30.0 s       1.0 s      100.0%    30.0 s       0.0 s 
+INFO  16:44:22,715 ProgressMeter -            done   2.4320447E7    38.0 s       1.0 s      100.0%    38.0 s       0.0 s 
+INFO  16:44:22,715 ProgressMeter - Total runtime 38.81 secs, 0.65 min, 0.01 hours 
+------------------------------------------------------------------------------------------
+Done. There were 6 WARN messages, the first 6 are repeated below.
+WARN  16:43:43,852 IndexDictionaryUtils - Track variant doesn't have a sequence dictionary built in, skipping dictionary validation 
+WARN  16:43:43,994 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  16:43:43,994 InbreedingCoeff - Annotation will not be calculated. InbreedingCoeff requires at least 10 unrelated samples. 
+WARN  16:43:43,995 StrandBiasTest - StrandBiasBySample annotation exists in input VCF header. Attempting to use StrandBiasBySample values to calculate strand bias annotation values. If no sample has the SB genotype annotation, annotation may still fail. 
+WARN  16:43:44,347 HaplotypeScore - Annotation will not be calculated, must be called from UnifiedGenotyper, not GenotypeGVCFs 
+WARN  16:43:51,761 ExactAFCalculator - This tool is currently set to genotype at most 6 alternate alleles in a given context, but the context at ordered_PKNH_05_v2: 177131 has 7 alternate alleles so only the top alleles will be used; see the --max_alternate_alleles argument. Unless the DEBUG logging level is used, this warning message is output just once per run and further warnings are suppressed. 
+------------------------------------------------------------------------------------------
+---------------------------------------
+Finished 
+
+======================================================================================
+                  Resource Usage on 2022-02-10 17:44:35:
+   Job Id:             35031029.gadi-pbs
+   Project:            pq84
+   Exit Status:        0
+   Service Units:      3.68
+   NCPUs Requested:    16                     NCPUs Used: 16              
+                                           CPU Time Used: 00:10:36                                   
+   Memory Requested:   100.0GB               Memory Used: 2.44GB          
+   Walltime requested: 48:00:00            Walltime Used: 00:04:25        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================

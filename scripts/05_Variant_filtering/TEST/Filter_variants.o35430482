@@ -1,0 +1,280 @@
+---------------------------------------
+PBS: Job identifier is 35430482.gadi-pbs
+PBS: Job name is Filter_variants
+---------------------------------------
+Define paths and load modules
+---------------------------------------
+Define paths and change to working directory
+---------------------------------------
+Correct bcftools introduced changes to make java happy
+---------------------------------------
+---------------------------------------
+SUBSET TO VARIANT TYPE
+---------------------------------------
+---------------------------------------
+SNPs
+INFO  16:53:34,823 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:53:34,824 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:53:34,824 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:53:34,824 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:53:34,824 HelpFormatter - [Thu Feb 17 16:53:34 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:53:34,824 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:53:34,826 HelpFormatter - Program Args: -T SelectVariants -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -V Consensus_fixed.vcf -selectType SNP -o /g/data/pq84/malaria/outputs/04_Variant_calling/filtered//GVCFall_SNPs.vcf 
+INFO  16:53:34,833 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0575.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:53:34,833 HelpFormatter - Date/Time: 2022/02/17 16:53:34 
+INFO  16:53:34,834 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:53:34,834 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:53:34,859 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:53:34,882 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:53:34,882 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:53:34,883 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:53:35,154 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  16:53:42,677 RMDTrackBuilder - Writing Tribble index to disk for file /g/data/pq84/malaria/outputs/04_Variant_calling/consensus/Consensus_fixed.vcf.idx 
+INFO  16:53:42,846 GenomeAnalysisEngine - Preparing for traversal 
+INFO  16:53:42,847 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:53:42,848 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:53:42,848 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:53:42,849 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:53:58,187 SelectVariants - 506098 records processed. 
+INFO  16:53:58,282 ProgressMeter -            done    510696.0    15.0 s      30.0 s       99.9%    15.0 s       0.0 s 
+INFO  16:53:58,283 ProgressMeter - Total runtime 15.43 secs, 0.26 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+---------------------------------------
+Indels
+INFO  16:53:59,573 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:53:59,574 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:53:59,574 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:53:59,575 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:53:59,575 HelpFormatter - [Thu Feb 17 16:53:59 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:53:59,575 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:53:59,577 HelpFormatter - Program Args: -T SelectVariants -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -V Consensus_fixed.vcf -selectType INDEL -o /g/data/pq84/malaria/outputs/04_Variant_calling/filtered//GVCFall_INDELs.vcf 
+INFO  16:53:59,582 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0575.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:53:59,582 HelpFormatter - Date/Time: 2022/02/17 16:53:59 
+INFO  16:53:59,582 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:53:59,582 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:53:59,601 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:53:59,616 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:53:59,616 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:53:59,617 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:53:59,730 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  16:53:59,808 GenomeAnalysisEngine - Preparing for traversal 
+INFO  16:53:59,809 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:53:59,809 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:53:59,809 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:53:59,809 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:54:08,091 SelectVariants - 506098 records processed. 
+INFO  16:54:08,150 ProgressMeter -            done    510696.0     8.0 s      16.0 s       99.9%     8.0 s       0.0 s 
+INFO  16:54:08,151 ProgressMeter - Total runtime 8.34 secs, 0.14 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+---------------------------------------
+FILTER
+---------------------------------------
+INFO  16:54:09,464 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:09,466 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:54:09,466 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:54:09,466 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:54:09,466 HelpFormatter - [Thu Feb 17 16:54:09 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:54:09,466 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:54:09,468 HelpFormatter - Program Args: -T VariantFiltration -V /g/data/pq84/malaria/outputs/04_Variant_calling/consensus//Consensus_fixed.vcf -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -filter QD < 20.0 -filterName QD2 -filter FS > 2.0 -filterName FS60 -filter MQ < 59.0 -filterName MQ40 -o /g/data/pq84/malaria/outputs/04_Variant_calling/filtered//PK_consensus_FILTERED.vcf 
+INFO  16:54:09,473 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0575.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:54:09,473 HelpFormatter - Date/Time: 2022/02/17 16:54:09 
+INFO  16:54:09,473 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:09,473 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:09,492 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:54:09,511 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:54:09,511 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:54:09,511 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:54:09,632 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  16:54:09,725 GenomeAnalysisEngine - Preparing for traversal 
+INFO  16:54:09,726 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:54:09,726 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:54:09,726 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:54:09,727 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  16:54:10,042 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:10,079 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:10,180 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:12,338 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:12,473 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:12,555 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:12,570 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:12,707 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:12,792 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:13,004 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:13,172 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:13,808 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:13,857 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:14,073 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:15,374 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:15,428 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:15,713 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:15,819 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:16,109 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:16,769 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:16,989 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:17,276 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:18,140 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:18,716 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:19,021 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:19,208 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:19,282 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:19,356 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:20,215 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:20,334 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:20,741 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:20,741 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:20,742 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:21,456 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:21,598 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:21,599 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:22,186 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:22,191 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:22,417 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:22,418 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:23,295 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:23,832 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:24,021 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:24,172 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:24,228 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:24,348 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:24,516 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:25,072 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:26,323 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:26,416 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:26,869 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:26,979 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:26,979 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:27,245 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:27,586 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:27,586 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+INFO  16:54:27,643 ProgressMeter -            done    510696.0    17.0 s      35.0 s       99.9%    17.0 s       0.0 s 
+INFO  16:54:27,643 ProgressMeter - Total runtime 17.92 secs, 0.30 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO  16:54:28,821 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:28,822 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:54:28,822 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:54:28,822 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:54:28,822 HelpFormatter - [Thu Feb 17 16:54:28 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:54:28,822 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:54:28,824 HelpFormatter - Program Args: -T VariantFiltration -V /g/data/pq84/malaria/outputs/04_Variant_calling/filtered//GVCFall_SNPs.vcf -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -filter QD < 20.0 -filterName QD2 -filter FS > 2.0 -filterName FS60 -filter MQ < 59.0 -filterName MQ40 -o /g/data/pq84/malaria/outputs/04_Variant_calling/filtered//FILTERED_SNPs.vcf 
+INFO  16:54:28,829 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0575.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:54:28,829 HelpFormatter - Date/Time: 2022/02/17 16:54:28 
+INFO  16:54:28,829 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:28,829 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:28,849 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:54:28,862 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:54:28,863 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:54:28,863 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:54:28,986 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  16:54:29,068 GenomeAnalysisEngine - Preparing for traversal 
+INFO  16:54:29,069 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:54:29,069 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:54:29,069 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:54:29,070 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+WARN  16:54:29,264 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:29,277 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:29,312 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,245 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,326 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,363 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,370 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,436 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,477 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,621 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,672 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,964 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:30,988 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:31,024 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:31,896 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:31,921 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:32,117 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:32,166 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:32,360 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:32,639 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:32,742 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:32,912 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:33,282 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:33,612 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:33,755 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:33,812 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:33,848 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:33,886 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:34,404 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:34,460 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:34,662 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:34,662 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:34,663 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:34,940 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:35,009 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:35,009 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:35,254 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:35,257 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:35,373 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:35,374 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:35,939 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:36,155 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:36,246 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:36,317 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:36,346 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:36,505 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:36,584 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:36,830 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:37,444 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:37,488 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:37,618 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:37,669 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:37,669 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:37,794 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:37,994 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+WARN  16:54:37,994 Interpreter - ![0,2]: 'QD < 20.0;' undefined variable QD 
+INFO  16:54:38,028 ProgressMeter -            done    502956.0     8.0 s      17.0 s       99.9%     8.0 s       0.0 s 
+INFO  16:54:38,029 ProgressMeter - Total runtime 8.96 secs, 0.15 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+INFO  16:54:39,265 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:39,266 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.8-1-0-gf15c1c3ef, Compiled 2018/02/19 05:43:50 
+INFO  16:54:39,266 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
+INFO  16:54:39,266 HelpFormatter - For support and documentation go to https://software.broadinstitute.org/gatk 
+INFO  16:54:39,266 HelpFormatter - [Thu Feb 17 16:54:39 GMT+10:00 2022] Executing on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64 
+INFO  16:54:39,266 HelpFormatter - OpenJDK 64-Bit Server VM 1.8.0_40-b25 
+INFO  16:54:39,268 HelpFormatter - Program Args: -T VariantFiltration -V /g/data/pq84/malaria/outputs/04_Variant_calling/filtered//GVCFall_INDELs.vcf -R /g/data/pq84/malaria/data/ref_genomes/PKA1H1/fasta/strain_A1_H.1.Icor.fasta -filter QD < 20.0 -filterName QD2 -filter FS > 2.0 -filterName FS60 -filter MQ < 59.0 -filterName MQ40 -o /g/data/pq84/malaria/outputs/04_Variant_calling/filtered//FILTERED_INDELs.vcf 
+INFO  16:54:39,273 HelpFormatter - Executing as jw1542@gadi-cpu-clx-0575.gadi.nci.org.au on Linux 4.18.0-348.2.1.el8.nci.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_40-b25. 
+INFO  16:54:39,273 HelpFormatter - Date/Time: 2022/02/17 16:54:39 
+INFO  16:54:39,273 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:39,273 HelpFormatter - ------------------------------------------------------------------------------------------- 
+INFO  16:54:39,305 NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/g/data/pq84/bin/GenomeAnalysisTK-3.8-1-0/GenomeAnalysisTK.jar!/com/intel/gkl/native/libgkl_compression.so 
+INFO  16:54:39,322 GenomeAnalysisEngine - Deflater: IntelDeflater 
+INFO  16:54:39,322 GenomeAnalysisEngine - Inflater: IntelInflater 
+INFO  16:54:39,322 GenomeAnalysisEngine - Strictness is SILENT 
+INFO  16:54:39,435 GenomeAnalysisEngine - Downsampling Settings: Method: BY_SAMPLE, Target Coverage: 1000 
+INFO  16:54:39,505 GenomeAnalysisEngine - Preparing for traversal 
+INFO  16:54:39,506 GenomeAnalysisEngine - Done preparing for traversal 
+INFO  16:54:39,506 ProgressMeter - [INITIALIZATION COMPLETE; STARTING PROCESSING] 
+INFO  16:54:39,506 ProgressMeter -                 | processed |    time |    per 1M |           |   total | remaining 
+INFO  16:54:39,506 ProgressMeter -        Location |     sites | elapsed |     sites | completed | runtime |   runtime 
+INFO  16:54:40,288 ProgressMeter -            done      7815.0     0.0 s      99.0 s       98.7%     0.0 s       0.0 s 
+INFO  16:54:40,288 ProgressMeter - Total runtime 0.78 secs, 0.01 min, 0.00 hours 
+------------------------------------------------------------------------------------------
+Done. There were no warn messages.
+------------------------------------------------------------------------------------------
+---------------------------------------
+Finsihed
+
+======================================================================================
+                  Resource Usage on 2022-02-17 17:54:42:
+   Job Id:             35430482.gadi-pbs
+   Project:            pq84
+   Exit Status:        0
+   Service Units:      0.48
+   NCPUs Requested:    10                     NCPUs Used: 10              
+                                           CPU Time Used: 00:02:30                                   
+   Memory Requested:   50.0GB                Memory Used: 2.72GB          
+   Walltime requested: 12:00:00            Walltime Used: 00:01:09        
+   JobFS requested:    100.0MB                JobFS used: 0B              
+======================================================================================
