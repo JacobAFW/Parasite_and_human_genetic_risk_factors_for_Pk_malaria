@@ -898,7 +898,7 @@ Notes:
 Installing vep:
     - GitHub URL: https://github.com/Ensembl/ensembl-vep
     - To install vep on Gadi requires a gcc compiler, but the Annobin requirement is not installed and must be done so before using gcc to compile vep.
-    - Also require PERL to install cpanM, which can then be used to install the Perl libraries need by vep.
+    - Also require PERL to install cpanM, which can then be used to install the Perl libraries needed by vep.
 
 We first needed to modify our GFF file:
     - Change the contig names to match the reference genome and VCF files.
